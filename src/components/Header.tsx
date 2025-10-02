@@ -1,11 +1,13 @@
-import { FileText } from 'lucide-react';
-
 export function Header() {
   return (
     <header className="absolute top-0 left-0 right-0 z-50 bg-[#1a1a1a] text-white border-b border-white/10 mx-3 md:mx-6 mt-3 md:mt-6 rounded-[1.5rem] md:rounded-[2.5rem]">
       <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-5 flex items-center justify-between">
         <div className="flex items-center gap-2 md:gap-3">
-          <FileText className="w-5 h-5 md:w-7 md:h-7 text-[#8e7951]" />
+          <img 
+            src="/logo-pgk-blanco.png" 
+            alt="PGK Logo" 
+            className="w-8 h-8 md:w-12 md:h-12 object-contain"
+          />
           <div>
             <h1 className="text-sm md:text-lg font-black tracking-tight uppercase">Podatek IRNR</h1>
             <p className="text-[8px] md:text-[10px] text-gray-500 uppercase tracking-wider">Model 210</p>
