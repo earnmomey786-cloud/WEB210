@@ -1,5 +1,7 @@
 # IRNR Tax Declaration Service (Model 210)
 
+[![Deploy to GitHub Pages](https://github.com/earnmomey786-cloud/WEB210/actions/workflows/deploy.yml/badge.svg)](https://github.com/earnmomey786-cloud/WEB210/actions/workflows/deploy.yml)
+
 Una aplicación web profesional para servicios de declaración del impuesto IRNR (modelo 210) en España, dirigida a propietarios polacos de propiedades inmobiliarias.
 
 ## 🌟 Características
@@ -80,6 +82,24 @@ src/
 - `npm run build` - Construye la aplicación para producción
 - `npm run preview` - Vista previa de la build de producción
 - `npm run lint` - Ejecuta el linter
+
+## 🚀 Deployment
+
+Esta aplicación está configurada para hacer deploy automático a **GitHub Pages** cuando se hace push a la rama `main`.
+
+**URL de producción:** https://earnmomey786-cloud.github.io/WEB210/
+
+### 🎯 Guía rápida de 5 minutos:
+
+👉 **[DEPLOY-QUICK-START.md](./DEPLOY-QUICK-START.md)** - Instrucciones paso a paso
+
+### Opciones de Deployment:
+
+1. **GitHub Pages** (Configurado) - Deploy automático via GitHub Actions
+2. **Vercel** - Configuración incluida en `vercel.json` (más fácil)
+3. **Netlify** - Configuración incluida en `netlify.toml`
+
+Para más detalles técnicos, consulta [DEPLOYMENT.md](./DEPLOYMENT.md)
 
 ## ⚖️ Cumplimiento Legal
 
