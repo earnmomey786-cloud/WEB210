@@ -87,13 +87,17 @@ Esta aplicación está configurada para hacer deploy automático a **GitHub Page
 
 **URL de producción:** https://earnmomey786-cloud.github.io/WEB210/
 
+### 🎯 Guía rápida de 5 minutos:
+
+👉 **[DEPLOY-QUICK-START.md](./DEPLOY-QUICK-START.md)** - Instrucciones paso a paso
+
 ### Opciones de Deployment:
 
 1. **GitHub Pages** (Configurado) - Deploy automático via GitHub Actions
-2. **Vercel** - Configuración incluida en `vercel.json`
+2. **Vercel** - Configuración incluida en `vercel.json` (más fácil)
 3. **Netlify** - Configuración incluida en `netlify.toml`
 
-Para más detalles sobre cómo hacer el deploy, consulta [DEPLOYMENT.md](./DEPLOYMENT.md)
+Para más detalles técnicos, consulta [DEPLOYMENT.md](./DEPLOYMENT.md)
 
 ## ⚖️ Cumplimiento Legal
 
