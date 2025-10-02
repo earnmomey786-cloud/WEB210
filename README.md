@@ -81,6 +81,20 @@ src/
 - `npm run preview` - Vista previa de la build de producción
 - `npm run lint` - Ejecuta el linter
 
+## 🚀 Deployment
+
+Esta aplicación está configurada para hacer deploy automático a **GitHub Pages** cuando se hace push a la rama `main`.
+
+**URL de producción:** https://earnmomey786-cloud.github.io/WEB210/
+
+### Opciones de Deployment:
+
+1. **GitHub Pages** (Configurado) - Deploy automático via GitHub Actions
+2. **Vercel** - Configuración incluida en `vercel.json`
+3. **Netlify** - Configuración incluida en `netlify.toml`
+
+Para más detalles sobre cómo hacer el deploy, consulta [DEPLOYMENT.md](./DEPLOYMENT.md)
+
 ## ⚖️ Cumplimiento Legal
 
 ### 📋 Políticas Implementadas
