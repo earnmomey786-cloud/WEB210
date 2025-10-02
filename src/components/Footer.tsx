@@ -40,7 +40,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="font-bold text-white mb-6 uppercase tracking-wider text-sm">Firma</h3>
+            <h3 className="font-bold text-white mb-6 uppercase tracking-wider text-sm">Legal</h3>
             <ul className="space-y-3 text-sm">
               <li>
                 <a href="#kontakt" className="hover:text-[#8e7951] transition-colors">
@@ -48,13 +48,18 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/regulamin" className="hover:text-[#8e7951] transition-colors">
-                  Regulamin
+                <a href="/legal/privacy" className="hover:text-[#8e7951] transition-colors">
+                  Privacidad / Prywatność
                 </a>
               </li>
               <li>
-                <a href="/polityka-prywatnosci" className="hover:text-[#8e7951] transition-colors">
-                  Prywatność
+                <a href="/legal/cookies" className="hover:text-[#8e7951] transition-colors">
+                  Cookies
+                </a>
+              </li>
+              <li>
+                <a href="/legal/terms" className="hover:text-[#8e7951] transition-colors">
+                  Aviso Legal / Nota Prawna
                 </a>
               </li>
             </ul>
@@ -79,9 +84,23 @@ export function Footer() {
 
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-600">
-            <p>© 2025 Podatek IRNR. Wszelkie prawa zastrzeżone.</p>
+            <div className="flex flex-col md:flex-row items-center gap-4">
+              <p>© 2025 Polska Grupa Konsultingowa (PGK Hiszpania). Todos los derechos reservados.</p>
+              <div className="flex gap-4">
+                <button 
+                  onClick={() => {
+                    // Reabrir configuración de cookies
+                    localStorage.removeItem('cookieConsent');
+                    window.location.reload();
+                  }}
+                  className="hover:text-[#8e7951] transition-colors underline"
+                >
+                  Gestionar Cookies / Zarządzaj Zgodą
+                </button>
+              </div>
+            </div>
             <p className="uppercase tracking-wider">
-              Profesjonalna obsługa podatkowa
+              Servicio fiscal profesional / Profesjonalna obsługa podatkowa
             </p>
           </div>
         </div>

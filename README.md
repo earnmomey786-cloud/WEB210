@@ -50,9 +50,15 @@ src/
 │   ├── Hero.tsx        # Sección hero
 │   ├── ServicePlans.tsx # Planes de servicios
 │   ├── Contact.tsx     # Formulario de contacto
+│   ├── CookieBanner.tsx # Banner de cookies RGPD
 │   └── ...
 ├── lib/                # Utilidades y configuraciones
 ├── pages/              # Páginas principales
+│   ├── legal/          # Páginas legales
+│   │   ├── PrivacyPolicy.tsx
+│   │   ├── CookiesPolicy.tsx
+│   │   └── LegalNotice.tsx
+│   └── Home.tsx
 └── types/              # Definiciones de TypeScript
 ```
 
@@ -64,6 +70,9 @@ src/
 - **Formulario de contacto** funcional
 - **Sección FAQ** con preguntas frecuentes
 - **Optimización SEO** completa
+- **Políticas legales completas** (RGPD/GDPR)
+- **Banner de cookies** conforme AEPD 2024/25
+- **Gestión de consentimientos** granular
 
 ## 🔧 Scripts Disponibles
 
@@ -71,6 +80,28 @@ src/
 - `npm run build` - Construye la aplicación para producción
 - `npm run preview` - Vista previa de la build de producción
 - `npm run lint` - Ejecuta el linter
+
+## ⚖️ Cumplimiento Legal
+
+### 📋 Políticas Implementadas
+- **Política de Privacidad** (ES/PL) - Conforme RGPD
+- **Política de Cookies** (ES/PL) - Conforme AEPD 2024/25
+- **Aviso Legal** (ES/PL) - Normativa española
+
+### 🍪 Gestión de Cookies
+- Banner conforme AEPD con botones "Aceptar" y "Rechazar" equivalentes
+- Panel de configuración granular por categorías
+- Acceso permanente a gestión de consentimientos
+- Registro de decisiones del usuario
+
+### 📊 Datos de Empresa Requeridos
+Los siguientes datos están pendientes de completar:
+- Denominación social completa
+- CIF/NIF definitivo
+- Dirección del domicilio social
+- Teléfono de contacto
+- Datos del Registro Mercantil
+- Información del DPO (si aplica)
 
 ## 📞 Contacto
 
