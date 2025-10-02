@@ -26,14 +26,6 @@ export function Header() {
             Kontakt
           </a>
         </nav>
-
-        <a
-          href="tel:+34123456789"
-          className="text-xs md:text-sm font-bold hover:text-[#8e7951] transition-colors tracking-wider"
-        >
-          <span className="hidden sm:inline">+34 123 456 789</span>
-          <span className="sm:hidden">Llamar</span>
-        </a>
       </div>
     </header>
   );
