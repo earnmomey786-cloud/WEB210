@@ -1,17 +1,22 @@
 # Documentación Legal - PGK Hiszpania
 
-## 📋 Datos de la Empresa Pendientes de Completar
+## 📋 Datos de la Empresa - COMPLETADOS ✅
 
-### Información que se debe proporcionar:
+### ✅ Información Confirmada:
 
-1. **Denominación social exacta** (tal como figura en el Registro Mercantil)
-2. **CIF/NIF definitivo** de la empresa
-3. **Domicilio social completo** (Calle, número, CP, ciudad, España)
-4. **Número de teléfono** de contacto
-5. **Datos del Registro Mercantil** (Tomo, Folio, Hoja)
-6. **DPO o persona de contacto RGPD** (si aplica)
-7. **Ciudad para jurisdicción** competente
-8. **Lista real de cookies** (si tienen CMP, exportar lista)
+1. **Razón social:** POLSKA GRUPA KONSULTINGOWA SL
+2. **CIF/NIF:** B22682827
+3. **Domicilio social:** Calle Matilde Peñaranda 27, 5º A, 03183 Torrevieja (Alicante), España
+4. **Forma jurídica:** Sociedad Limitada (S.L.)
+5. **Actividad (CNAE):** 6420 - Actividades de las sociedades holding
+6. **Actividad comercial:** Consultoría y servicios fiscales Polonia-España (Modelo 210/IRNR)
+7. **Email de contacto:** info@pgkhiszpania.com
+8. **Jurisdicción competente:** Torrevieja (Alicante)
+
+### ⏳ Pendiente de confirmar:
+- **Número de teléfono** de contacto (opcional para publicación)
+- **Datos del Registro Mercantil** (si se desean incluir públicamente)
+- **DPO** (Delegado de Protección de Datos) - No es obligatorio para empresas pequeñas
 
 ### Datos confirmados:
 - **Marca comercial:** Polska Grupa Konsultingowa (PGK Hiszpania)
@@ -199,12 +204,14 @@ analizować ruch oraz personalizować treści.
 ## 🎯 Próximos Pasos para Completar al 100%
 
 ### 1. Datos de la Empresa
-- [ ] Proporcionar denominación social exacta
-- [ ] Proporcionar CIF/NIF
-- [ ] Proporcionar domicilio completo
-- [ ] Proporcionar teléfono de contacto
-- [ ] Proporcionar datos del Registro Mercantil
-- [ ] Confirmar si hay DPO o contacto RGPD
+- [x] Proporcionar denominación social exacta: **POLSKA GRUPA KONSULTINGOWA SL**
+- [x] Proporcionar CIF/NIF: **B22682827**
+- [x] Proporcionar domicilio completo: **Calle Matilde Peñaranda 27, 5º A, 03183 Torrevieja (Alicante)**
+- [x] Confirmar forma jurídica: **Sociedad Limitada**
+- [x] Confirmar jurisdicción: **Torrevieja (Alicante)**
+- [ ] Proporcionar teléfono de contacto (opcional)
+- [ ] Proporcionar datos del Registro Mercantil (opcional)
+- [ ] Confirmar si hay DPO o contacto RGPD (no obligatorio para S.L. pequeñas)
 
 ### 2. Configuración Técnica
 - [ ] Implementar CMP profesional (ej: OneTrust, Cookiebot, Termly)

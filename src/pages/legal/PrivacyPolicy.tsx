@@ -18,13 +18,13 @@ export function PrivacyPolicy() {
                 <h3 className="text-lg font-medium text-gray-700 mb-3">Español (ES)</h3>
                 <div className="space-y-2 text-sm text-gray-600">
                   <p><strong>Marca comercial:</strong> Polska Grupa Konsultingowa (PGK Hiszpania)</p>
-                  <p><strong>Razón social:</strong> [Denominación social completa]</p>
-                  <p><strong>CIF/NIF:</strong> [CIF/NIF]</p>
-                  <p><strong>Domicilio social:</strong> [Calle, nº, CP, ciudad, España]</p>
+                  <p><strong>Razón social:</strong> POLSKA GRUPA KONSULTINGOWA SL</p>
+                  <p><strong>CIF/NIF:</strong> B22682827</p>
+                  <p><strong>Domicilio social:</strong> Calle Matilde Peñaranda 27, 5º A, 03183 Torrevieja (Alicante), España</p>
                   <p><strong>Email de contacto:</strong> info@pgkhiszpania.com</p>
-                  <p><strong>Teléfono:</strong> [número]</p>
-                  <p><strong>Inscripción registral:</strong> [Datos del Registro Mercantil]</p>
-                  <p><strong>DPO (si aplica):</strong> [Nombre y email]</p>
+                  <p><strong>Teléfono:</strong> [Por confirmar]</p>
+                  <p><strong>Forma jurídica:</strong> Sociedad Limitada</p>
+                  <p><strong>Actividad:</strong> CNAE 6420 - Actividades de las sociedades holding / Servicios de consultoría fiscal</p>
                 </div>
               </div>
               
@@ -32,13 +32,13 @@ export function PrivacyPolicy() {
                 <h3 className="text-lg font-medium text-gray-700 mb-3">Polski (PL)</h3>
                 <div className="space-y-2 text-sm text-gray-600">
                   <p><strong>Nazwa handlowa / marka:</strong> Polska Grupa Konsultingowa (PGK Hiszpania)</p>
-                  <p><strong>Podmiot prawny (firma):</strong> [Nazwa spółki / pełna firma prawna]</p>
-                  <p><strong>NIF/CIF:</strong> [CIF/NIF]</p>
-                  <p><strong>Siedziba (adres):</strong> [Ulica, nr, kod, miasto, Hiszpania]</p>
+                  <p><strong>Podmiot prawny (firma):</strong> POLSKA GRUPA KONSULTINGOWA SL</p>
+                  <p><strong>NIF/CIF:</strong> B22682827</p>
+                  <p><strong>Siedziba (adres):</strong> Calle Matilde Peñaranda 27, 5º A, 03183 Torrevieja (Alicante), Hiszpania</p>
                   <p><strong>E-mail kontaktowy:</strong> info@pgkhiszpania.com</p>
-                  <p><strong>Telefon:</strong> [numer]</p>
-                  <p><strong>Rejestr handlowy:</strong> [Dane rejestru / tom, folio, hoja / R.M.]</p>
-                  <p><strong>Inspektor Ochrony Danych:</strong> [Imię, e-mail]</p>
+                  <p><strong>Telefon:</strong> [Do potwierdzenia]</p>
+                  <p><strong>Forma prawna:</strong> Sociedad Limitada (Spółka z o.o.)</p>
+                  <p><strong>Działalność:</strong> CNAE 6420 - Działalność holdingów / Usługi doradztwa podatkowego</p>
                 </div>
               </div>
             </div>
@@ -48,7 +48,7 @@ export function PrivacyPolicy() {
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">Política de Privacidad (ES)</h2>
             <div className="prose max-w-none text-gray-600">
-              <p><strong>Responsable:</strong> [razón social], CIF [xxx], domicilio [xxx], email: info@pgkhiszpania.com</p>
+              <p><strong>Responsable:</strong> POLSKA GRUPA KONSULTINGOWA SL, CIF B22682827, domicilio en Calle Matilde Peñaranda 27, 5º A, 03183 Torrevieja (Alicante), email: info@pgkhiszpania.com</p>
               
               <h3 className="text-lg font-medium text-gray-700 mt-6 mb-3">Finalidades</h3>
               <p>Prestación de servicios fiscales (Modelo 210/IRNR), atención de consultas, facturación y cumplimiento legal.</p>
@@ -91,7 +91,7 @@ export function PrivacyPolicy() {
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">Polityka prywatności (PL)</h2>
             <div className="prose max-w-none text-gray-600">
-              <p><strong>Administrator danych:</strong> [pełna firma], NIF/CIF [xxx], adres [xxx], e-mail: info@pgkhiszpania.com</p>
+              <p><strong>Administrator danych:</strong> POLSKA GRUPA KONSULTINGOWA SL, NIF/CIF B22682827, adres: Calle Matilde Peñaranda 27, 5º A, 03183 Torrevieja (Alicante), Hiszpania, e-mail: info@pgkhiszpania.com</p>
               
               <h3 className="text-lg font-medium text-gray-700 mt-6 mb-3">Zakres</h3>
               <p>Przetwarzamy dane w celu świadczenia usług doradczych i podatkowych (Model 210/IRNR), obsługi zapytań, rozliczeń i zgodności prawnej.</p>

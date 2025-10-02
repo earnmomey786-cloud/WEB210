@@ -69,14 +69,12 @@ export function Footer() {
             <h3 className="font-bold text-white mb-6 uppercase tracking-wider text-sm">Kontakt</h3>
             <ul className="space-y-3 text-sm">
               <li>
-                <a href="mailto:kontakt@podatek-irnr.pl" className="hover:text-[#8e7951] transition-colors block">
-                  kontakt@podatek-irnr.pl
+                <a href="mailto:info@pgkhiszpania.com" className="hover:text-[#8e7951] transition-colors block">
+                  info@pgkhiszpania.com
                 </a>
               </li>
-              <li>
-                <a href="tel:+34123456789" className="hover:text-[#8e7951] transition-colors block">
-                  +34 123 456 789
-                </a>
+              <li className="text-gray-500">
+                Torrevieja (Alicante), España
               </li>
             </ul>
           </div>
@@ -85,7 +83,7 @@ export function Footer() {
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-600">
             <div className="flex flex-col md:flex-row items-center gap-4">
-              <p>© 2025 Polska Grupa Konsultingowa (PGK Hiszpania). Todos los derechos reservados.</p>
+              <p>© 2025 POLSKA GRUPA KONSULTINGOWA SL (CIF: B22682827). Todos los derechos reservados.</p>
               <div className="flex gap-4">
                 <button 
                   onClick={() => {

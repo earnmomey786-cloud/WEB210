@@ -15,10 +15,11 @@ export function LegalNotice() {
             <div className="prose max-w-none text-gray-600">
               <h3 className="text-lg font-medium text-gray-700 mt-6 mb-3">Identificación del prestador</h3>
               <div className="bg-gray-50 p-4 rounded-lg mb-4">
-                <p><strong>Razón social:</strong> [razón social]</p>
-                <p><strong>CIF/NIF:</strong> [xxx]</p>
-                <p><strong>Domicilio:</strong> [xxx]</p>
+                <p><strong>Razón social:</strong> POLSKA GRUPA KONSULTINGOWA SL</p>
+                <p><strong>CIF/NIF:</strong> B22682827</p>
+                <p><strong>Domicilio:</strong> Calle Matilde Peñaranda 27, 5º A, 03183 Torrevieja (Alicante), España</p>
                 <p><strong>Email:</strong> info@pgkhiszpania.com</p>
+                <p><strong>Forma jurídica:</strong> Sociedad Limitada</p>
               </div>
               
               <h3 className="text-lg font-medium text-gray-700 mt-6 mb-3">Condiciones de uso</h3>
@@ -31,7 +32,7 @@ export function LegalNotice() {
               </ul>
               
               <h3 className="text-lg font-medium text-gray-700 mt-6 mb-3">Ley aplicable y jurisdicción</h3>
-              <p>Este sitio web se rige por la ley española. Los juzgados competentes serán los de [ciudad].</p>
+              <p>Este sitio web se rige por la ley española. Los juzgados competentes serán los de Torrevieja (Alicante).</p>
               
               <h3 className="text-lg font-medium text-gray-700 mt-6 mb-3">Propiedad intelectual</h3>
               <p>Todos los contenidos de este sitio web están protegidos por derechos de propiedad intelectual. Se permite el uso dentro de los límites legales establecidos.</p>
@@ -47,10 +48,11 @@ export function LegalNotice() {
             <div className="prose max-w-none text-gray-600">
               <h3 className="text-lg font-medium text-gray-700 mt-6 mb-3">Identyfikacja usługodawcy</h3>
               <div className="bg-gray-50 p-4 rounded-lg mb-4">
-                <p><strong>Pełna firma:</strong> [pełna firma]</p>
-                <p><strong>CIF/NIF:</strong> [xxx]</p>
-                <p><strong>Adres:</strong> [xxx]</p>
+                <p><strong>Pełna firma:</strong> POLSKA GRUPA KONSULTINGOWA SL</p>
+                <p><strong>CIF/NIF:</strong> B22682827</p>
+                <p><strong>Adres:</strong> Calle Matilde Peñaranda 27, 5º A, 03183 Torrevieja (Alicante), Hiszpania</p>
                 <p><strong>E-mail:</strong> info@pgkhiszpania.com</p>
+                <p><strong>Forma prawna:</strong> Sociedad Limitada (Spółka z o.o.)</p>
               </div>
               
               <h3 className="text-lg font-medium text-gray-700 mt-6 mb-3">Warunki korzystania</h3>
@@ -63,7 +65,7 @@ export function LegalNotice() {
               </ul>
               
               <h3 className="text-lg font-medium text-gray-700 mt-6 mb-3">Prawo właściwe i jurysdykcja</h3>
-              <p>Niniejsza strona podlega prawu hiszpańskiemu. Właściwe są sądy w [miasto].</p>
+              <p>Niniejsza strona podlega prawu hiszpańskiemu. Właściwe są sądy w Torrevieja (Alicante).</p>
               
               <h3 className="text-lg font-medium text-gray-700 mt-6 mb-3">Prawa własności intelektualnej</h3>
               <p>Wszystkie materiały na tej stronie są chronione prawami własności intelektualnej. Dozwolony jest użytek w granicach prawa.</p>
@@ -77,19 +79,17 @@ export function LegalNotice() {
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">Información Adicional / Dodatkowe Informacje</h2>
             <div className="prose max-w-none text-gray-600">
-              <div className="bg-yellow-50 p-6 rounded-lg">
-                <h3 className="text-lg font-medium text-gray-700 mb-3">Datos pendientes de completar:</h3>
-                <ul className="list-disc pl-6 space-y-1 text-sm">
-                  <li>Denominación social completa de la empresa</li>
-                  <li>Número CIF/NIF definitivo</li>
-                  <li>Dirección completa del domicilio social</li>
-                  <li>Número de teléfono de contacto</li>
-                  <li>Datos del Registro Mercantil</li>
-                  <li>Información del DPO (si aplica)</li>
-                  <li>Ciudad para jurisdicción competente</li>
+              <div className="bg-green-50 p-6 rounded-lg">
+                <h3 className="text-lg font-medium text-green-800 mb-3">✓ Datos empresariales completados</h3>
+                <ul className="list-disc pl-6 space-y-1 text-sm text-green-700">
+                  <li>✓ Denominación social: POLSKA GRUPA KONSULTINGOWA SL</li>
+                  <li>✓ CIF/NIF: B22682827</li>
+                  <li>✓ Domicilio social: Calle Matilde Peñaranda 27, 5º A, 03183 Torrevieja (Alicante)</li>
+                  <li>✓ Forma jurídica: Sociedad Limitada</li>
+                  <li>✓ Jurisdicción: Torrevieja (Alicante)</li>
                 </ul>
                 <p className="text-sm text-gray-600 mt-4">
-                  <em>Estos datos se completarán una vez se proporcionen los datos exactos de la empresa o las URLs internas donde figuren.</em>
+                  <strong>Pendiente:</strong> Número de teléfono de contacto y datos del Registro Mercantil (si se desean incluir públicamente)
                 </p>
               </div>
             </div>
