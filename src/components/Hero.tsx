@@ -29,22 +29,28 @@ export function Hero() {
               <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="noise"/>
               <feDisplacementMap in="SourceGraphic" in2="noise" scale="1" />
             </filter>
-            <path id="topArc" d="M 40 150 A 110 110 0 0 1 260 150" />
+            <path id="topArc" d="M 35 150 A 115 115 0 0 1 265 150" />
           </defs>
 
           {/* Círculo de fondo blanco para mejor contraste */}
-          <circle cx="150" cy="150" r="138" fill="white" opacity="0.95"/>
+          <circle cx="150" cy="150" r="140" fill="white" opacity="0.98"/>
           
-          <circle cx="150" cy="150" r="135" fill="none" stroke="currentColor" strokeWidth="6" filter="url(#grunge)"/>
-          <circle cx="150" cy="150" r="118" fill="none" stroke="currentColor" strokeWidth="2" opacity="0.5"/>
+          {/* Borde exterior oscuro */}
+          <circle cx="150" cy="150" r="137" fill="none" stroke="#1e293b" strokeWidth="5" filter="url(#grunge)"/>
+          
+          {/* Borde interior dorado (color de la web) */}
+          <circle cx="150" cy="150" r="123" fill="none" stroke="#8e7951" strokeWidth="3" opacity="0.8"/>
 
-          <text fill="currentColor" fontSize="18" fontWeight="700" letterSpacing="1">
+          {/* Texto superior curvado - más grande y espaciado */}
+          <text fill="#1e293b" fontSize="16" fontWeight="800" letterSpacing="2">
             <textPath href="#topArc" startOffset="50%" textAnchor="middle">ODPOWIADAMY ZA PRACĘ</textPath>
           </text>
 
-          <g fontSize="20" fontWeight="800" textAnchor="middle" fill="currentColor">
-            <text x="150" y="150">JEŚLI TO NASZ BŁĄD,</text>
-            <text x="150" y="175">PŁACIMY MY.</text>
+          {/* Texto central - más grande y con mejor espacio */}
+          <g fontSize="24" fontWeight="900" textAnchor="middle" fill="#1e293b">
+            <text x="150" y="155">JEŚLI TO</text>
+            <text x="150" y="182">NASZ BŁĄD,</text>
+            <text x="150" y="209" fontSize="22" fontWeight="900">PŁACIMY MY.</text>
           </g>
         </svg>
       </div>
