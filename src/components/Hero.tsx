@@ -29,8 +29,7 @@ export function Hero() {
         />
 
         <p className="text-base md:text-lg text-gray-700 text-center max-w-2xl mb-10 leading-relaxed">
-          Kompleksowa obsługa podatku dla nierezydentów w Hiszpanii<br />
-          dla polskich właścicieli nieruchomości
+          Rozliczenie właścicieli z Polski posiadających nieruchomości w Hiszpanii.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 mb-12">
