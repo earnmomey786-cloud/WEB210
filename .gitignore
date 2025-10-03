@@ -21,6 +21,15 @@ dist-ssr
 *.sln
 *.sw?
 .env
+.env.local
+.env.production
+
+# SSL Certificates (nunca subir certificados privados)
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
 
 # Bolt configuration
 .bolt/

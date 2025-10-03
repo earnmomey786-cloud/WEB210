@@ -1,0 +1,66 @@
+# Configuración de seguridad para Netlify/Vercel
+# Este archivo define los headers de seguridad que se aplicarán a todas las páginas
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # HSTS - HTTP Strict Transport Security
+    # Fuerza HTTPS durante 1 año (31536000 segundos)
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    
+    # Content Security Policy
+    # Permite solo recursos del mismo origen y servicios específicos
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://*.supabase.co https://www.google-analytics.com; frame-ancestors 'self';"
+    
+    # Previene MIME-sniffing
+    X-Content-Type-Options = "nosniff"
+    
+    # Protección contra clickjacking
+    X-Frame-Options = "SAMEORIGIN"
+    
+    # Política de referrer
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    
+    # Protección XSS para navegadores antiguos
+    X-XSS-Protection = "1; mode=block"
+    
+    # Política de permisos
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Headers específicos para archivos estáticos (caché)
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Headers para el sitemap y robots.txt
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Content-Type = "application/xml; charset=utf-8"
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/robots.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+    Cache-Control = "public, max-age=3600"
+
+# Redirigir HTTP a HTTPS
+[[redirects]]
+  from = "http://podatkihiszpania.com/*"
+  to = "https://podatkihiszpania.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.podatkihiszpania.com/*"
+  to = "https://podatkihiszpania.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.podatkihiszpania.com/*"
+  to = "https://podatkihiszpania.com/:splat"
+  status = 301
+  force = true
