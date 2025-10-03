@@ -1,0 +1,13 @@
+# robots.txt para podatkihiszpania.com
+# Permite el acceso completo a todos los bots de búsqueda
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://podatkihiszpania.com/sitemap.xml
+
+# Desautorizar solo contenido administrativo o de prueba (si existiera)
+# Disallow: /admin/
+# Disallow: /test/
+# Disallow: /private/
