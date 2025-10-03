@@ -18,13 +18,14 @@
 /* Guarantee Stamp Styles */
 .stamp-wrap {
   position: absolute;
-  top: 1.25rem;
-  right: 1.25rem;
-  color: #0F172A;
-  width: min(28vw, 160px);
+  bottom: 1.25rem;
+  left: 1.25rem;
+  color: #1e293b;
+  width: min(22vw, 130px);
   height: auto;
   animation: stamp-pop 0.85s cubic-bezier(0.2, 0.8, 0.2, 1) 0.15s both;
-  filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.18));
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.25));
+  z-index: 20;
 }
 
 @keyframes stamp-pop {
@@ -52,8 +53,8 @@
 
 @media (max-width: 640px) {
   .stamp-wrap {
-    top: 0.75rem;
-    right: 0.75rem;
-    width: min(36vw, 120px);
+    bottom: 0.75rem;
+    left: 0.75rem;
+    width: min(28vw, 100px);
   }
 }

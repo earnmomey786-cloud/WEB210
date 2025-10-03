@@ -30,19 +30,21 @@ export function Hero() {
               <feDisplacementMap in="SourceGraphic" in2="noise" scale="1" />
             </filter>
             <path id="topArc" d="M 40 150 A 110 110 0 0 1 260 150" />
-            <path id="bottomArc" d="M 60 170 A 90 90 0 0 0 240 170" />
           </defs>
 
-          <circle cx="150" cy="150" r="135" fill="none" stroke="currentColor" strokeWidth="8" filter="url(#grunge)"/>
-          <circle cx="150" cy="150" r="115" fill="none" stroke="currentColor" strokeWidth="3" opacity="0.6"/>
+          {/* Círculo de fondo blanco para mejor contraste */}
+          <circle cx="150" cy="150" r="138" fill="white" opacity="0.95"/>
+          
+          <circle cx="150" cy="150" r="135" fill="none" stroke="currentColor" strokeWidth="6" filter="url(#grunge)"/>
+          <circle cx="150" cy="150" r="118" fill="none" stroke="currentColor" strokeWidth="2" opacity="0.5"/>
 
-          <text fill="currentColor" fontSize="20" fontWeight="700" letterSpacing="1.5">
-            <textPath href="#topArc" startOffset="50%" textAnchor="middle">ODPOWIADAMY ZA NASZĄ PRACĘ</textPath>
+          <text fill="currentColor" fontSize="18" fontWeight="700" letterSpacing="1">
+            <textPath href="#topArc" startOffset="50%" textAnchor="middle">ODPOWIADAMY ZA PRACĘ</textPath>
           </text>
 
-          <g fontSize="22" fontWeight="800" textAnchor="middle" fill="currentColor">
+          <g fontSize="20" fontWeight="800" textAnchor="middle" fill="currentColor">
             <text x="150" y="150">JEŚLI TO NASZ BŁĄD,</text>
-            <text x="150" y="178">PŁACIMY MY.</text>
+            <text x="150" y="175">PŁACIMY MY.</text>
           </g>
         </svg>
       </div>
