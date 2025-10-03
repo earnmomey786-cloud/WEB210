@@ -21,6 +21,32 @@ export function Hero() {
       {/* Overlay gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/90 to-white/70"></div>
 
+      {/* Guarantee Stamp */}
+      <div className="stamp-wrap" aria-label="Gwarancja odpowiedzialności: jeśli to nasz błąd, płacimy my." role="img">
+        <svg viewBox="0 0 300 300" className="stamp-svg" aria-hidden="true">
+          <defs>
+            <filter id="grunge">
+              <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="noise"/>
+              <feDisplacementMap in="SourceGraphic" in2="noise" scale="1" />
+            </filter>
+            <path id="topArc" d="M 40 150 A 110 110 0 0 1 260 150" />
+            <path id="bottomArc" d="M 60 170 A 90 90 0 0 0 240 170" />
+          </defs>
+
+          <circle cx="150" cy="150" r="135" fill="none" stroke="currentColor" strokeWidth="8" filter="url(#grunge)"/>
+          <circle cx="150" cy="150" r="115" fill="none" stroke="currentColor" strokeWidth="3" opacity="0.6"/>
+
+          <text fill="currentColor" fontSize="20" fontWeight="700" letterSpacing="1.5">
+            <textPath href="#topArc" startOffset="50%" textAnchor="middle">ODPOWIADAMY ZA NASZĄ PRACĘ</textPath>
+          </text>
+
+          <g fontSize="22" fontWeight="800" textAnchor="middle" fill="currentColor">
+            <text x="150" y="150">JEŚLI TO NASZ BŁĄD,</text>
+            <text x="150" y="178">PŁACIMY MY.</text>
+          </g>
+        </svg>
+      </div>
+
       {/* Content */}
       <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-8 py-16">
         <TypewriterEffectSmooth

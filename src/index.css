@@ -14,3 +14,46 @@
 .animate-shine {
   animation: shine 3s infinite;
 }
+
+/* Guarantee Stamp Styles */
+.stamp-wrap {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  color: #0F172A;
+  width: min(28vw, 160px);
+  height: auto;
+  animation: stamp-pop 0.85s cubic-bezier(0.2, 0.8, 0.2, 1) 0.15s both;
+  filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.18));
+}
+
+@keyframes stamp-pop {
+  0% {
+    transform: scale(0.8) rotate(-6deg);
+    opacity: 0;
+  }
+  40% {
+    transform: scale(1.06) rotate(2deg);
+    opacity: 1;
+  }
+  70% {
+    transform: scale(0.98) rotate(-1deg);
+  }
+  100% {
+    transform: scale(1) rotate(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stamp-wrap {
+    animation: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .stamp-wrap {
+    top: 0.75rem;
+    right: 0.75rem;
+    width: min(36vw, 120px);
+  }
+}
