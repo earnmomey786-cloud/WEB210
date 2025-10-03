@@ -29,7 +29,8 @@ export function Hero() {
               <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="noise"/>
               <feDisplacementMap in="SourceGraphic" in2="noise" scale="1" />
             </filter>
-            <path id="topArc" d="M 30 150 A 120 120 0 0 1 270 150" />
+            {/* Path más interior para el texto - radio más pequeño */}
+            <path id="topArc" d="M 45 150 A 105 105 0 0 1 255 150" />
           </defs>
 
           {/* Círculo de fondo blanco para mejor contraste */}
@@ -41,8 +42,8 @@ export function Hero() {
           {/* Borde interior dorado (color de la web) */}
           <circle cx="150" cy="150" r="125" fill="none" stroke="#8e7951" strokeWidth="4" opacity="0.9"/>
 
-          {/* Texto superior curvado */}
-          <text fill="#0f172a" fontSize="19" fontWeight="900" letterSpacing="3" style={{ textTransform: 'uppercase' }}>
+          {/* Texto superior curvado - ahora más dentro del sello */}
+          <text fill="#0f172a" fontSize="18" fontWeight="900" letterSpacing="2.5" style={{ textTransform: 'uppercase' }}>
             <textPath href="#topArc" startOffset="50%" textAnchor="middle">ODPOWIADAMY ZA PRACĘ</textPath>
           </text>
 
