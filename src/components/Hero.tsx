@@ -29,28 +29,28 @@ export function Hero() {
               <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="noise"/>
               <feDisplacementMap in="SourceGraphic" in2="noise" scale="1" />
             </filter>
-            <path id="topArc" d="M 35 150 A 115 115 0 0 1 265 150" />
+            <path id="topArc" d="M 30 150 A 120 120 0 0 1 270 150" />
           </defs>
 
           {/* Círculo de fondo blanco para mejor contraste */}
-          <circle cx="150" cy="150" r="140" fill="white" opacity="0.98"/>
+          <circle cx="150" cy="150" r="142" fill="white" opacity="1"/>
           
           {/* Borde exterior oscuro */}
-          <circle cx="150" cy="150" r="137" fill="none" stroke="#1e293b" strokeWidth="5" filter="url(#grunge)"/>
+          <circle cx="150" cy="150" r="138" fill="none" stroke="#0f172a" strokeWidth="6" filter="url(#grunge)"/>
           
           {/* Borde interior dorado (color de la web) */}
-          <circle cx="150" cy="150" r="123" fill="none" stroke="#8e7951" strokeWidth="3" opacity="0.8"/>
+          <circle cx="150" cy="150" r="125" fill="none" stroke="#8e7951" strokeWidth="4" opacity="0.9"/>
 
-          {/* Texto superior curvado - más grande y espaciado */}
-          <text fill="#1e293b" fontSize="16" fontWeight="800" letterSpacing="2">
+          {/* Texto superior curvado */}
+          <text fill="#0f172a" fontSize="19" fontWeight="900" letterSpacing="3" style={{ textTransform: 'uppercase' }}>
             <textPath href="#topArc" startOffset="50%" textAnchor="middle">ODPOWIADAMY ZA PRACĘ</textPath>
           </text>
 
-          {/* Texto central - más grande y con mejor espacio */}
-          <g fontSize="24" fontWeight="900" textAnchor="middle" fill="#1e293b">
-            <text x="150" y="155">JEŚLI TO</text>
-            <text x="150" y="182">NASZ BŁĄD,</text>
-            <text x="150" y="209" fontSize="22" fontWeight="900">PŁACIMY MY.</text>
+          {/* Texto central - MUCHO más grande y legible */}
+          <g textAnchor="middle" fill="#0f172a" fontFamily="Arial, sans-serif">
+            <text x="150" y="150" fontSize="28" fontWeight="900" letterSpacing="1">JEŚLI TO</text>
+            <text x="150" y="180" fontSize="28" fontWeight="900" letterSpacing="1">NASZ BŁĄD,</text>
+            <text x="150" y="210" fontSize="26" fontWeight="900" letterSpacing="0.5">PŁACIMY MY.</text>
           </g>
         </svg>
       </div>
