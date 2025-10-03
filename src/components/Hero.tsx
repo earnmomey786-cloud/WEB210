@@ -86,8 +86,8 @@ export function Hero() {
           </a>
         </div>
 
-        <p className="text-xs text-gray-600 mb-6">
-          np. Właściciele nieruchomości w Costa del Sol, Alicante, Walencji
+        <p className="text-sm md:text-base text-gray-700 mb-6 text-center max-w-3xl font-medium leading-relaxed">
+          Jeśli doradca podatkowy, który rozlicza Twoje podatki, nie przekazuje Ci tabel amortyzacji, tracisz pieniądze.
         </p>
       </div>
 
