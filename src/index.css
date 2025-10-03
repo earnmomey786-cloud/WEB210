@@ -23,7 +23,7 @@
   width: min(22vw, 135px);
   height: auto;
   animation: stamp-pop 0.85s cubic-bezier(0.2, 0.8, 0.2, 1) 0.15s both,
-             stamp-pulse 3s ease-in-out 1.5s infinite;
+             stamp-pulse 2.5s ease-in-out 2s infinite;
   filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.3));
   z-index: 20;
 }
@@ -53,9 +53,11 @@
 @keyframes stamp-pulse {
   0%, 100% {
     opacity: 1;
+    transform: scale(1);
   }
   50% {
-    opacity: 0.75;
+    opacity: 0.6;
+    transform: scale(0.98);
   }
 }
 
