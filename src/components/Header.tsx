@@ -9,8 +9,10 @@ export function Header() {
             className="w-8 h-8 md:w-12 md:h-12 object-contain"
           />
           <div>
-            <h1 className="text-sm md:text-lg font-black tracking-tight uppercase">Podatek IRNR</h1>
-            <p className="text-[8px] md:text-[10px] text-gray-500 uppercase tracking-wider">Model 210</p>
+            {/* Versión móvil: solo "PGK Hiszpania" */}
+            <h1 className="text-sm font-black tracking-tight md:hidden whitespace-nowrap">PGK Hiszpania</h1>
+            {/* Versión tablet/desktop: nombre completo */}
+            <h1 className="hidden md:block text-base lg:text-lg xl:text-xl font-black tracking-tight whitespace-nowrap">Polska Grupa Konsultingowa S.L</h1>
           </div>
         </div>
 

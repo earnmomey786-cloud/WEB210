@@ -25,7 +25,7 @@ export function Hero() {
       <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-8 py-16">
         <TypewriterEffectSmooth
           words={words}
-          className="text-5xl md:text-6xl lg:text-7xl text-center text-[#0a0a0a] leading-tight tracking-tight"
+          className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl text-center text-[#0a0a0a] leading-tight tracking-tight"
         />
 
         <p className="text-base md:text-lg text-gray-700 text-center max-w-2xl mb-10 leading-relaxed">
