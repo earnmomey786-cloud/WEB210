@@ -81,9 +81,17 @@ export function Footer() {
         </div>
 
         <div className="border-t border-white/10 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-600">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-600 mb-8">
             <div className="flex flex-col md:flex-row items-center gap-4">
-              <p>© 2025 POLSKA GRUPA KONSULTINGOWA SL (CIF: B22682827). Todos los derechos reservados.</p>
+              <p>© 2025 Polska Grupa Konsultingowa SL. Wszelkie prawa zastrzeżone.</p>
+              <a 
+                href="https://www.boe.es/borme/dias/2025/08/07/pdfs/BORME-A-2025-149-03.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#8e7951] transition-colors underline"
+              >
+                Sprawdź nasz rejestr
+              </a>
               <div className="flex gap-4">
                 <button 
                   onClick={() => {
@@ -99,6 +107,13 @@ export function Footer() {
             </div>
             <p className="uppercase tracking-wider">
               Servicio fiscal profesional / Profesjonalna obsługa podatkowa
+            </p>
+          </div>
+
+          <div className="bg-white/5 rounded-lg p-6 border border-white/10">
+            <h4 className="text-white font-bold mb-3 text-sm uppercase tracking-wider">Ważna Informacja Prawna:</h4>
+            <p className="text-xs leading-relaxed text-gray-500">
+              Stwierdzenia zawarte na tej stronie internetowej dotyczące ochrony podatkowej, braku błędów i skutków wobec administracji lub sądów należy rozumieć w ramach prawnych ograniczeń wiążących interpretacji podatkowych: ich skuteczność zależy od braku istotnych zmian w stanie faktycznym, obowiązujących przepisach lub interpretacji administracyjnej i nie wykluczają one sankcji w przypadku zatajenia, oszustwa lub innych sytuacji uregulowanych prawem. Dla każdej konkretnej sytuacji zalecamy skonsultowanie się z profesjonalną opinią i obowiązującymi przepisami.
             </p>
           </div>
         </div>

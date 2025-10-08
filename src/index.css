@@ -15,62 +15,107 @@
   animation: shine 3s infinite;
 }
 
-/* Guarantee Stamp Styles */
-.stamp-wrap {
-  position: absolute;
-  bottom: 1.5rem;
-  left: 1.5rem;
-  width: min(22vw, 135px);
-  height: auto;
-  animation: stamp-pop 0.85s cubic-bezier(0.2, 0.8, 0.2, 1) 0.15s both,
-             stamp-pulse 2.5s ease-in-out 2s infinite;
-  filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.3));
-  z-index: 20;
-}
-
-.stamp-svg {
-  width: 100%;
-  height: auto;
-}
-
-@keyframes stamp-pop {
+/* Pricing Card Border Animation */
+@keyframes borderRotate {
   0% {
-    transform: scale(0.8) rotate(-6deg);
+    transform: rotate(10deg);
     opacity: 0;
   }
-  40% {
-    transform: scale(1.06) rotate(2deg);
-    opacity: 1;
-  }
-  70% {
-    transform: scale(0.98) rotate(-1deg);
-  }
   100% {
-    transform: scale(1) rotate(0);
-  }
-}
-
-@keyframes stamp-pulse {
-  0%, 100% {
+    transform: rotate(0deg);
     opacity: 1;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.6;
-    transform: scale(0.98);
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .stamp-wrap {
-    animation: none;
+.pricing-card .card-border {
+  position: absolute;
+  inset: 0px;
+  border: 2px solid #8e7951;
+  opacity: 0;
+  transform: rotate(10deg);
+  transition: all 0.5s ease-in-out;
+  pointer-events: none;
+}
+
+.pricing-card:hover .card-border {
+  inset: 15px;
+  opacity: 1;
+  transform: rotate(0);
+}
+
+.pricing-card {
+  transition: all 0.5s ease-in-out;
+}
+
+.pricing-card:hover {
+  border-radius: 0 !important;
+  transform: scale(1.05);
+}
+
+/* Social Links Buttons - Adapted from Uiverse.io by AlimurtuzaCodes */
+.btn {
+  border: none;
+  width: 100%;
+  max-width: 15em;
+  min-width: 200px;
+  height: 4em;
+  border-radius: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background: #1C1A1C;
+  cursor: pointer;
+  transition: all 450ms ease-in-out;
+  text-decoration: none;
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .btn {
+    height: 5em;
+    gap: 12px;
   }
 }
 
-@media (max-width: 640px) {
-  .stamp-wrap {
-    bottom: 1rem;
-    left: 1rem;
-    width: min(28vw, 105px);
+.sparkle {
+  fill: #AAAAAA;
+  transition: all 800ms ease;
+  flex-shrink: 0;
+}
+
+.text {
+  font-weight: 600;
+  color: #AAAAAA;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (min-width: 768px) {
+  .text {
+    font-size: 1rem;
   }
 }
+
+.btn:hover {
+  background: linear-gradient(0deg, #a38a5f, #8e7951);
+  box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),
+  inset 0px -4px 0px 0px rgba(0, 0, 0, 0.2),
+  0px 0px 0px 4px rgba(255, 255, 255, 0.2),
+  0px 0px 180px 0px #8e7951;
+  transform: translateY(-2px);
+}
+
+.btn:hover .text {
+  color: white;
+}
+
+.btn:hover .sparkle {
+  fill: white;
+  transform: scale(1.2);
+}
+
+
+

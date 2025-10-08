@@ -14,7 +14,7 @@ export function Header() {
           </div>
         </div>
 
-        <nav className="hidden lg:flex items-center gap-10 text-xs uppercase tracking-widest">
+        <nav className="hidden lg:flex items-center gap-10 text-sm uppercase tracking-widest">
           <a href="#cennik" className="hover:text-[#8e7951] transition-colors font-medium">
             Cennik
           </a>

@@ -1,7 +1,7 @@
 import { Home } from './pages/Home';
 import { PrivacyPolicy } from './pages/legal/PrivacyPolicy';
 import { CookiesPolicy } from './pages/legal/CookiesPolicy';
-import { LegalNotice } from './pages/legal/LegalNotice';
+import { LegalNotice as LegalNoticePage } from './pages/LegalNotice';
 import { CookieBanner } from './components/CookieBanner';
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
       case '/legal/cookies':
         return <CookiesPolicy />;
       case '/legal/terms':
-        return <LegalNotice />;
+        return <LegalNoticePage />;
       default:
         return <Home />;
     }

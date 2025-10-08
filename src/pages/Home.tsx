@@ -6,6 +6,7 @@ import { FAQ } from '../components/FAQ';
 import { Contact } from '../components/Contact';
 import { Footer } from '../components/Footer';
 import { StructuredData } from '../components/StructuredData';
+import { SocialLinks } from '../components/SocialLinks';
 
 export function Home() {
   return (
@@ -17,6 +18,7 @@ export function Home() {
         <ServicePlans />
         <ProcessSteps />
         <Contact />
+        <SocialLinks />
         <FAQ />
       </main>
       <Footer />

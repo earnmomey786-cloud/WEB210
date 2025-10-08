@@ -43,7 +43,7 @@ export function FAQ() {
     <section id="faq" className="py-24 bg-gradient-to-br from-gray-50 to-white">
       <div className="max-w-5xl mx-auto px-6">
         <div className="mb-20">
-          <p className="text-sm uppercase tracking-[0.3em] text-[#8e7951] font-semibold mb-4 text-center">
+          <p className="text-base uppercase tracking-[0.3em] text-[#8e7951] font-semibold mb-4 text-center">
             FAQ
           </p>
           <h2 className="text-4xl md:text-6xl font-black text-center mb-8 text-[#1a1a1a]">
@@ -94,7 +94,7 @@ export function FAQ() {
           <p className="text-gray-600 mb-6 text-lg">Masz inne pytania?</p>
           <a
             href="#kontakt"
-            className="inline-flex items-center justify-center px-10 py-5 bg-[#1a1a1a] text-white text-sm uppercase tracking-widest font-semibold hover:bg-[#8e7951] transition-all duration-300"
+            className="inline-flex items-center justify-center px-10 py-5 bg-[#1a1a1a] text-white text-base uppercase tracking-widest font-semibold hover:bg-[#8e7951] transition-all duration-300"
           >
             Skontaktuj się
           </a>
