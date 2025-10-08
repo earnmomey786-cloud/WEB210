@@ -11,7 +11,7 @@
     "typecheck": "tsc --noEmit -p tsconfig.app.json",
     "server": "node server/email-server.cjs",
     "dev:all": "concurrently \"npm run dev\" \"npm run server\"",
-    "start": "npx serve -s dist -l ${PORT:-3000}"
+    "start": "node server.js"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
