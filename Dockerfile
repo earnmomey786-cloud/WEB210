@@ -5,14 +5,17 @@ WORKDIR /app
 # Copiar package files
 COPY package*.json ./
 
-# Instalar dependencias
-RUN npm install --omit=dev
+# Instalar TODAS las dependencias (necesitamos vite para el build)
+RUN npm install
 
 # Copiar el resto del código
 COPY . .
 
 # Build the app
 RUN npm run build
+
+# Limpiar devDependencies después del build
+RUN npm prune --production
 
 # Expose port
 EXPOSE 3000
