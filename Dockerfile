@@ -2,13 +2,13 @@ FROM node:18-alpine
 
 WORKDIR /app
 
-# Copy package files
+# Copiar package files
 COPY package*.json ./
 
-# Install dependencies
-RUN npm install
+# Instalar dependencias
+RUN npm install --omit=dev
 
-# Copy source code
+# Copiar el resto del código
 COPY . .
 
 # Build the app
