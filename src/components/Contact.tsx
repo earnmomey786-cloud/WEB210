@@ -22,7 +22,7 @@ export function Contact() {
 
     try {
       // 1. Enviar email (PRIORITARIO)
-      const emailResponse = await fetch('https://nati-email.kfwt9t.easypanel.host/api/send-email', {
+      const emailResponse = await fetch('/api/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
