@@ -1,16 +1,18 @@
-import { FileText } from 'lucide-react';
-
-export function Footer() {
+export default function Footer() {
   return (
     <footer className="bg-[#1a1a1a] text-gray-400">
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <FileText className="w-8 h-8 text-[#8e7951]" />
+              <img 
+                src="/logo-pgk-blanco.png" 
+                alt="PGK Logo" 
+                className="w-12 h-12 object-contain"
+              />
               <div>
-                <span className="font-black text-white text-lg uppercase tracking-tight block">Podatek IRNR</span>
-                <span className="text-[10px] text-gray-600 uppercase tracking-wider">Model 210</span>
+                <span className="font-black text-white text-lg tracking-tight block">Polska Grupa Konsultingowa</span>
+                <span className="text-xs text-[#8e7951]">S.L.</span>
               </div>
             </div>
             <p className="text-sm leading-relaxed">
