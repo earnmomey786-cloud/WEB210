@@ -21,7 +21,7 @@ export function Contact() {
     setSubmitStatus('idle');
 
     try {
-      // 1. Enviar email (PRIORITARIO)
+      // Enviar email al servidor integrado
       const emailResponse = await fetch('/api/send-email', {
         method: 'POST',
         headers: {
