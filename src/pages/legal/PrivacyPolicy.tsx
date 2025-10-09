@@ -1,3 +1,4 @@
+import { Shield } from 'lucide-react';
 import { Header } from '../../components/Header';
 import Footer from '../../components/Footer';
 
@@ -5,134 +6,162 @@ export function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
-      <main className="pt-[72px] px-6 py-12">
-        <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-8">Política de Privacidad / Polityka Prywatności</h1>
-          
-          {/* Datos de la empresa */}
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">Datos de la empresa / Dane firmy</h2>
-            
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-lg font-medium text-gray-700 mb-3">Español (ES)</h3>
-                <div className="space-y-2 text-sm text-gray-600">
-                  <p><strong>Marca comercial:</strong> Polska Grupa Konsultingowa (PGK Hiszpania)</p>
-                  <p><strong>Razón social:</strong> POLSKA GRUPA KONSULTINGOWA SL</p>
-                  <p><strong>CIF/NIF:</strong> B22682827</p>
-                  <p><strong>Domicilio social:</strong> Calle Matilde Peñaranda 27, 5º A, 03183 Torrevieja (Alicante), España</p>
-                  <p><strong>Email de contacto:</strong> info@pgkhiszpania.com</p>
-                  <p><strong>Teléfono:</strong> [Por confirmar]</p>
-                  <p><strong>Forma jurídica:</strong> Sociedad Limitada</p>
-                  <p><strong>Actividad:</strong> CNAE 6420 - Actividades de las sociedades holding / Servicios de consultoría fiscal</p>
-                </div>
+      <main className="pt-[72px]">
+        <section className="py-16 bg-white">
+          <div className="max-w-4xl mx-auto px-4 md:px-6">
+            <div className="mb-12 text-center">
+              <div className="flex items-center justify-center gap-3 mb-6">
+                <Shield className="w-10 h-10 text-[#8e7951]" />
+                <h1 className="text-4xl md:text-5xl font-black text-[#1a1a1a]">
+                  Política de Privacidad
+                </h1>
               </div>
-              
-              <div>
-                <h3 className="text-lg font-medium text-gray-700 mb-3">Polski (PL)</h3>
-                <div className="space-y-2 text-sm text-gray-600">
-                  <p><strong>Nazwa handlowa / marka:</strong> Polska Grupa Konsultingowa (PGK Hiszpania)</p>
-                  <p><strong>Podmiot prawny (firma):</strong> POLSKA GRUPA KONSULTINGOWA SL</p>
+              <p className="text-gray-600 text-lg">
+                Polityka Prywatności
+              </p>
+            </div>
+
+            <div className="space-y-8 text-gray-700">
+              {/* Sección 1 */}
+              <div className="bg-gray-50 rounded-2xl p-6 md:p-8">
+                <h2 className="text-2xl font-black text-[#1a1a1a] mb-4">
+                  1. Responsable del Tratamiento de sus Datos Personales
+                </h2>
+                <p className="text-base mb-4">El responsable del tratamiento de los datos recabados a través de este sitio web es:</p>
+                <div className="space-y-2 text-base">
+                  <p><strong>Nombre o Razón Social:</strong> Polska Grupa Konsultingowa</p>
                   <p><strong>NIF/CIF:</strong> B22682827</p>
-                  <p><strong>Siedziba (adres):</strong> Calle Matilde Peñaranda 27, 5º A, 03183 Torrevieja (Alicante), Hiszpania</p>
-                  <p><strong>E-mail kontaktowy:</strong> info@pgkhiszpania.com</p>
-                  <p><strong>Telefon:</strong> [Do potwierdzenia]</p>
-                  <p><strong>Forma prawna:</strong> Sociedad Limitada (Spółka z o.o.)</p>
-                  <p><strong>Działalność:</strong> CNAE 6420 - Działalność holdingów / Usługi doradztwa podatkowego</p>
+                  <p><strong>Domicilio Social:</strong> Calle Matilde Peñaranda, 27, 03183 Torrevieja (Alicante), España</p>
+                  <p><strong>Correo Electrónico:</strong> <a href="mailto:info@pgkhiszpania.com" className="text-[#8e7951] hover:underline">info@pgkhiszpania.com</a></p>
+                  <p><strong>Teléfono:</strong> 644 106 222</p>
+                  <p><strong>Sitio Web:</strong> www.podatkihiszpania.com</p>
                 </div>
               </div>
-            </div>
-          </section>
 
-          {/* Política de privacidad ES */}
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">Política de Privacidad (ES)</h2>
-            <div className="prose max-w-none text-gray-600">
-              <p><strong>Responsable:</strong> POLSKA GRUPA KONSULTINGOWA SL, CIF B22682827, domicilio en Calle Matilde Peñaranda 27, 5º A, 03183 Torrevieja (Alicante), email: info@pgkhiszpania.com</p>
-              
-              <h3 className="text-lg font-medium text-gray-700 mt-6 mb-3">Finalidades</h3>
-              <p>Prestación de servicios fiscales (Modelo 210/IRNR), atención de consultas, facturación y cumplimiento legal.</p>
-              
-              <h3 className="text-lg font-medium text-gray-700 mt-6 mb-3">Base jurídica (art. 6 RGPD)</h3>
-              <ul className="list-disc pl-6 space-y-1">
-                <li>Ejecución de contrato</li>
-                <li>Obligación legal</li>
-                <li>Interés legítimo</li>
-                <li>Consentimiento (marketing/cookies)</li>
-              </ul>
-              
-              <h3 className="text-lg font-medium text-gray-700 mt-6 mb-3">Datos tratados</h3>
-              <p>Identificativos, contacto, facturación, fiscales, documentación de inmuebles.</p>
-              
-              <h3 className="text-lg font-medium text-gray-700 mt-6 mb-3">Destinatarios</h3>
-              <p>Pasarela de pago (Stripe), hosting/correo, CRM, asesores, Administración Tributaria.</p>
-              
-              <h3 className="text-lg font-medium text-gray-700 mt-6 mb-3">Transferencias internacionales</h3>
-              <p>Si las hubiera, con garantías (Cláusulas Contractuales Tipo, TIA).</p>
-              
-              <h3 className="text-lg font-medium text-gray-700 mt-6 mb-3">Plazos de conservación</h3>
-              <p>Relación contractual + plazos fiscales y regulatorios.</p>
-              
-              <h3 className="text-lg font-medium text-gray-700 mt-6 mb-3">Derechos</h3>
-              <p>Acceso, rectificación, supresión, limitación, oposición, portabilidad; reclamación ante la AEPD.</p>
-              
-              <h3 className="text-lg font-medium text-gray-700 mt-6 mb-3">Seguridad</h3>
-              <p>Cifrado en tránsito y reposo; control de accesos.</p>
-              
-              <h3 className="text-lg font-medium text-gray-700 mt-6 mb-3">Marketing</h3>
-              <p>Únicamente con consentimiento; revocable en cualquier momento.</p>
-              
-              <h3 className="text-lg font-medium text-gray-700 mt-6 mb-3">Cookies</h3>
-              <p>Ver "Política de cookies".</p>
-            </div>
-          </section>
+              {/* Sección 2 */}
+              <div>
+                <h2 className="text-2xl font-black text-[#1a1a1a] mb-4">
+                  2. Finalidad del Tratamiento de sus Datos Personales
+                </h2>
+                <p className="text-base mb-4">En Polska Grupa Konsultingowa tratamos la información que nos facilitan las personas interesadas con los siguientes fines:</p>
+                <ul className="space-y-3 text-base">
+                  <li className="flex gap-3">
+                    <span className="text-[#8e7951] font-bold flex-shrink-0">•</span>
+                    <span>Gestionar las solicitudes de información, consultas o cualquier tipo de petición que sea realizada por el usuario a través de cualquiera de las formas de contacto puestas a su disposición.</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-[#8e7951] font-bold flex-shrink-0">•</span>
+                    <span>Envío de comunicaciones comerciales sobre nuestros productos y servicios, siempre que se haya obtenido el consentimiento expreso del usuario.</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-[#8e7951] font-bold flex-shrink-0">•</span>
+                    <span>Realizar análisis estadísticos y estudios de mercado.</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-[#8e7951] font-bold flex-shrink-0">•</span>
+                    <span>Gestionar la relación contractual o precontractual con nuestros clientes y proveedores.</span>
+                  </li>
+                </ul>
+              </div>
 
-          {/* Polityka prywatności PL */}
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">Polityka prywatności (PL)</h2>
-            <div className="prose max-w-none text-gray-600">
-              <p><strong>Administrator danych:</strong> POLSKA GRUPA KONSULTINGOWA SL, NIF/CIF B22682827, adres: Calle Matilde Peñaranda 27, 5º A, 03183 Torrevieja (Alicante), Hiszpania, e-mail: info@pgkhiszpania.com</p>
-              
-              <h3 className="text-lg font-medium text-gray-700 mt-6 mb-3">Zakres</h3>
-              <p>Przetwarzamy dane w celu świadczenia usług doradczych i podatkowych (Model 210/IRNR), obsługi zapytań, rozliczeń i zgodności prawnej.</p>
-              
-              <h3 className="text-lg font-medium text-gray-700 mt-6 mb-3">Podstawy prawne (art. 6 RODO)</h3>
-              <ul className="list-disc pl-6 space-y-1">
-                <li>Wykonanie umowy</li>
-                <li>Obowiązek prawny</li>
-                <li>Uzasadniony interes</li>
-                <li>Zgoda (np. marketing/cookies)</li>
-              </ul>
-              
-              <h3 className="text-lg font-medium text-gray-700 mt-6 mb-3">Kategorie danych</h3>
-              <p>Identyfikacyjne, kontaktowe, rozliczeniowe, podatkowe, dokumenty nieruchomości.</p>
-              
-              <h3 className="text-lg font-medium text-gray-700 mt-6 mb-3">Odbiorcy</h3>
-              <p>Banki/podmioty płatnicze (Stripe), hosting i poczta, narzędzia CRM, doradcy/księgowi, organy podatkowe.</p>
-              
-              <h3 className="text-lg font-medium text-gray-700 mt-6 mb-3">Transfery poza EOG</h3>
-              <p>Jeśli występują, stosujemy mechanizmy zgodności (SCC, TIA).</p>
-              
-              <h3 className="text-lg font-medium text-gray-700 mt-6 mb-3">Okresy przechowywania</h3>
-              <p>Przez czas trwania relacji + okresy wymagane prawem podatkowym.</p>
-              
-              <h3 className="text-lg font-medium text-gray-700 mt-6 mb-3">Prawa użytkownika</h3>
-              <p>Dostęp, sprostowanie, usunięcie, ograniczenie, sprzeciw, przenoszenie, skarga do AEPD (Hiszpania) lub UODO (Polska).</p>
-              
-              <h3 className="text-lg font-medium text-gray-700 mt-6 mb-3">Kontakt/DPO</h3>
-              <p>[Dane DPO lub kontakt do administratora].</p>
-              
-              <h3 className="text-lg font-medium text-gray-700 mt-6 mb-3">Formularze i dokumenty</h3>
-              <p>Dane przekazywane przez bezpieczny formularz, szyfrowane w tranzycie; pliki przechowywane w szyfrowanym magazynie.</p>
-              
-              <h3 className="text-lg font-medium text-gray-700 mt-6 mb-3">Komunikacja marketingowa</h3>
-              <p>Tylko za zgodą; możliwość wycofania w każdej chwili.</p>
-              
-              <h3 className="text-lg font-medium text-gray-700 mt-6 mb-3">Cookies</h3>
-              <p>Patrz "Polityka cookies".</p>
+              {/* Sección 3 */}
+              <div className="bg-gray-50 rounded-2xl p-6 md:p-8">
+                <h2 className="text-2xl font-black text-[#1a1a1a] mb-4">
+                  3. Legitimación para el Tratamiento de sus Datos
+                </h2>
+                <p className="text-base leading-relaxed mb-3">
+                  La base legal para el tratamiento de sus datos es el consentimiento del interesado, la ejecución de un contrato o precontrato, o el interés legítimo del responsable.
+                </p>
+                <p className="text-base leading-relaxed">
+                  En el caso de las comunicaciones comerciales, la base legal es el consentimiento que se le solicita.
+                </p>
+              </div>
+
+              {/* Sección 4 */}
+              <div>
+                <h2 className="text-2xl font-black text-[#1a1a1a] mb-4">
+                  4. Conservación de sus Datos
+                </h2>
+                <p className="text-base leading-relaxed">
+                  Los datos personales proporcionados se conservarán mientras se mantenga la relación con el usuario, no se solicite su supresión por el interesado, o durante los años necesarios para cumplir con las obligaciones legales.
+                </p>
+              </div>
+
+              {/* Sección 5 */}
+              <div className="bg-gray-50 rounded-2xl p-6 md:p-8">
+                <h2 className="text-2xl font-black text-[#1a1a1a] mb-4">
+                  5. Destinatarios de sus Datos
+                </h2>
+                <p className="text-base leading-relaxed mb-3">
+                  Sus datos no se cederán a terceros, salvo obligación legal.
+                </p>
+                <p className="text-base leading-relaxed">
+                  No obstante, para la prestación de determinados servicios, es posible que sus datos sean tratados por terceros que actúan como encargados del tratamiento, bajo las instrucciones de Polska Grupa Konsultingowa y con las garantías adecuadas.
+                </p>
+              </div>
+
+              {/* Sección 6 */}
+              <div>
+                <h2 className="text-2xl font-black text-[#1a1a1a] mb-4">
+                  6. Derechos del Interesado
+                </h2>
+                <p className="text-base leading-relaxed mb-4">
+                  Cualquier persona tiene derecho a obtener confirmación sobre si en Polska Grupa Konsultingowa estamos tratando datos personales que les conciernan, o no.
+                </p>
+                <div className="space-y-3 text-base">
+                  <p className="leading-relaxed">
+                    Las personas interesadas tienen derecho a <strong>acceder a sus datos personales</strong>, así como a solicitar la <strong>rectificación de los datos inexactos</strong> o, en su caso, solicitar su <strong>supresión</strong> cuando, entre otros motivos, los datos ya no sean necesarios para los fines que fueron recogidos.
+                  </p>
+                  <p className="leading-relaxed">
+                    En determinadas circunstancias, los interesados podrán solicitar la <strong>limitación del tratamiento</strong> de sus datos, en cuyo caso únicamente los conservaremos para el ejercicio o la defensa de reclamaciones.
+                  </p>
+                  <p className="leading-relaxed">
+                    En determinadas circunstancias y por motivos relacionados con su situación particular, los interesados podrán <strong>oponerse al tratamiento</strong> de sus datos. Polska Grupa Konsultingowa dejará de tratar los datos, salvo por motivos legítimos imperiosos, o el ejercicio o la defensa de posibles reclamaciones.
+                  </p>
+                  <p className="leading-relaxed">
+                    Los interesados también tienen derecho a la <strong>portabilidad de sus datos</strong>.
+                  </p>
+                  <p className="leading-relaxed">
+                    Finalmente, los interesados tienen derecho a <strong>presentar una reclamación</strong> ante la Agencia Española de Protección de Datos (AEPD), especialmente cuando no haya obtenido satisfacción en el ejercicio de sus derechos.
+                  </p>
+                </div>
+              </div>
+
+              {/* Sección 7 */}
+              <div className="bg-blue-50 border-2 border-blue-200 rounded-2xl p-6 md:p-8">
+                <h2 className="text-2xl font-black text-[#1a1a1a] mb-4">
+                  7. ¿Cómo puede ejercer sus Derechos?
+                </h2>
+                <p className="text-base leading-relaxed">
+                  Puede ejercer sus derechos enviando un escrito a <strong>Polska Grupa Konsultingowa</strong>, a la dirección postal <strong>Calle Matilde Peñaranda, 27, 03183 Torrevieja (Alicante), España</strong>, o a la dirección de correo electrónico <a href="mailto:info@pgkhiszpania.com" className="text-[#8e7951] hover:underline font-semibold">info@pgkhiszpania.com</a>, adjuntando fotocopia de su DNI o documento identificativo equivalente.
+                </p>
+              </div>
+
+              {/* Sección 8 */}
+              <div className="bg-[#1a1a1a] text-white rounded-2xl p-6 md:p-8">
+                <h2 className="text-2xl font-black text-white mb-4">
+                  8. Cambios en la Política de Privacidad
+                </h2>
+                <p className="text-base leading-relaxed text-gray-300">
+                  Polska Grupa Konsultingowa se reserva el derecho a modificar la presente Política de Privacidad para adaptarla a novedades legislativas o jurisprudenciales, así como a prácticas de la industria. En dichos supuestos, anunciará en esta página los cambios introducidos con razonable antelación a su puesta en práctica.
+                </p>
+              </div>
             </div>
-          </section>
-        </div>
+
+            {/* Fecha de última actualización */}
+            <div className="mt-12 pt-8 border-t border-gray-200 text-center">
+              <p className="text-sm text-gray-500">
+                Última actualización: Enero 2025
+              </p>
+              <a 
+                href="/"
+                className="inline-block mt-6 px-8 py-3 bg-[#8e7951] text-white text-sm uppercase tracking-widest font-semibold hover:bg-[#9e8961] transition-all duration-300"
+              >
+                Volver al inicio
+              </a>
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </div>
