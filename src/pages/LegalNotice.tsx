@@ -42,7 +42,7 @@ export function LegalNotice() {
                   2. Objeto y Ámbito de la Web
                 </h2>
                 <p className="text-base leading-relaxed">
-                  El presente Aviso Legal regula el acceso y el uso de la página web <strong>www.pgkhiszpania.com</strong>, incluyendo los contenidos y servicios puestos a disposición de los usuarios en y/o a través de la misma.
+                  El presente Aviso Legal regula el acceso y el uso de la página web <strong>www.podatkihiszpania.com</strong>, incluyendo los contenidos y servicios puestos a disposición de los usuarios en y/o a través de la misma.
                 </p>
               </div>
 
@@ -82,7 +82,7 @@ export function LegalNotice() {
                   6. Política de Privacidad y Protección de Datos
                 </h2>
                 <p className="text-base leading-relaxed">
-                  La información sobre el tratamiento de datos personales se encuentra detallada en la Política de Privacidad de esta web, accesible en <a href="/legal/privacy" className="text-[#8e7951] hover:underline font-semibold">www.pgkhiszpania.com/polityka-prywatnosci</a>.
+                  La información sobre el tratamiento de datos personales se encuentra detallada en la Política de Privacidad de esta web, accesible en <a href="/legal/privacy" className="text-[#8e7951] hover:underline font-semibold">www.podatkihiszpania.com/polityka-prywatnosci</a>.
                 </p>
               </div>
 
@@ -92,7 +92,7 @@ export function LegalNotice() {
                   7. Política de Cookies
                 </h2>
                 <p className="text-base leading-relaxed">
-                  Esta web utiliza cookies propias y de terceros para mejorar la experiencia de navegación y ofrecer contenidos de interés. Para más información, consulte nuestra Política de Cookies en <a href="/legal/cookies" className="text-[#8e7951] hover:underline font-semibold">www.pgkhiszpania.com/polityka-prywatnosci</a>.
+                  Esta web utiliza cookies propias y de terceros para mejorar la experiencia de navegación y ofrecer contenidos de interés. Para más información, consulte nuestra Política de Cookies en <a href="/legal/cookies" className="text-[#8e7951] hover:underline font-semibold">www.podatkihiszpania.com/polityka-cookies</a>.
                 </p>
               </div>
 
@@ -139,7 +139,7 @@ export function LegalNotice() {
                     <p><strong>Domicilio Social:</strong> Calle Matilde Peñaranda, 27, 03183 Torrevieja (Alicante), España</p>
                     <p><strong>Correo Electrónico:</strong> <a href="mailto:info@pgkhiszpania.com" className="text-[#8e7951] hover:underline">info@pgkhiszpania.com</a></p>
                     <p><strong>Teléfono:</strong> 644 106 222</p>
-                    <p><strong>Sitio Web:</strong> www.pgkhiszpania.com</p>
+                    <p><strong>Sitio Web:</strong> www.podatkihiszpania.com</p>
                   </div>
                 </div>
 
