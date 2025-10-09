@@ -55,11 +55,6 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/legal/cookies" className="hover:text-[#8e7951] transition-colors">
-                  Cookies
-                </a>
-              </li>
-              <li>
                 <a href="/legal/terms" className="hover:text-[#8e7951] transition-colors">
                   Aviso Legal / Nota Prawna
                 </a>
