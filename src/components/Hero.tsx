@@ -44,7 +44,7 @@ export function Hero() {
             Zobacz cennik
           </Button>
           <a
-            href="#proces"
+            href="#kontakt"
             className="px-8 py-3.5 bg-[#0a0a0a] text-white rounded-full font-semibold hover:bg-[#1a1a1a] transition-all shadow-md text-base flex items-center justify-center"
           >
             Zostaw zapytanie
