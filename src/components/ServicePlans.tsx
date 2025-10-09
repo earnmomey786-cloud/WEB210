@@ -123,22 +123,23 @@ export function ServicePlans() {
               {featureDetails.map((feature, idx) => (
                 <div 
                   key={idx} 
-                  className="group relative bg-white p-6 rounded-2xl border-2 border-gray-100 hover:border-[#8e7951] transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
+                  className="group relative bg-white p-8 rounded-2xl border-2 border-gray-100 hover:border-[#8e7951] transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 overflow-hidden"
                 >
-                  {/* Icon Circle */}
-                  <div className="w-12 h-12 bg-gradient-to-br from-[#8e7951] to-[#7a6643] rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <div className="w-3 h-3 bg-white rounded-full"></div>
+                  {/* Efecto de fondo animado */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#8e7951]/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  
+                  {/* Contenido */}
+                  <div className="relative z-10">
+                    <h5 className="text-xl font-black text-[#1a1a1a] mb-4 group-hover:text-[#8e7951] transition-colors duration-300">
+                      {feature.title}
+                    </h5>
+                    <p className="text-base text-gray-600 leading-relaxed">
+                      {feature.description}
+                    </p>
                   </div>
                   
-                  <h5 className="text-lg font-black text-[#1a1a1a] mb-3 group-hover:text-[#8e7951] transition-colors duration-300">
-                    {feature.title}
-                  </h5>
-                  <p className="text-base text-gray-600 leading-relaxed">
-                    {feature.description}
-                  </p>
-                  
-                  {/* Decorative Corner */}
-                  <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#8e7951]/10 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  {/* Borde decorativo animado */}
+                  <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-[#8e7951] to-[#7a6643] group-hover:w-full transition-all duration-500"></div>
                 </div>
               ))}
             </div>
