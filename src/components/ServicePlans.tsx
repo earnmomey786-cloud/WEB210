@@ -15,7 +15,7 @@ const plans: PricingPlan[] = [
   {
     name: 'Mieszkanie z dwoma właścicielami',
     price: 550,
-    description: 'Zawiera złożenie formularza Model 210 dwa razy: za wynajem oraz za przypisany dochód z nieruchomości. Pełna metoda: analiza, alternatywy, przygotowanie dowodów i raport techniczny.'
+    description: 'Zawiera złożenie formularza Model 210 cztery razy: dwa razy za wynajem i dwa razy za przypisany dochód z nieruchomości (każdy właściciel składa 2 deklaracje). Pełna metoda: analiza, alternatywy, przygotowanie dowodów i raport techniczny.'
   },
   {
     name: 'Mieszkanie z jednym właścicielem',
