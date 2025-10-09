@@ -13,11 +13,11 @@ export function LegalNotice() {
               <div className="flex items-center justify-center gap-3 mb-6">
                 <FileText className="w-10 h-10 text-[#8e7951]" />
                 <h1 className="text-4xl md:text-5xl font-black text-[#1a1a1a]">
-                  Aviso Legal / Nota Prawna
+                  Nota Prawna
                 </h1>
               </div>
               <p className="text-gray-600 text-lg">
-                Condiciones de uso de la página web
+                Aviso Legal - Condiciones de uso de la página web
               </p>
             </div>
 
