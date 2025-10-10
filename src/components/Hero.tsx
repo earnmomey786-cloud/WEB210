@@ -29,7 +29,7 @@ export function Hero() {
         />
 
         <p className="text-base md:text-lg text-gray-700 text-center max-w-2xl mb-10 leading-relaxed">
-          Jeśli doradca podatkowy, który rozlicza Twoje podatki, nie przekazuje Ci tabel amortyzacji, tracisz pieniądze.
+          Jeśli doradca podatkowy nie przekazuje Ci tabel amortyzacji, tracisz pieniądze.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 mb-12">
