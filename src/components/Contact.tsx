@@ -10,6 +10,7 @@ export function Contact() {
     num_properties: 1,
     num_owners: 1,
     has_garage_storage: false,
+    is_rented: false,
     additional_notes: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -63,6 +64,7 @@ export function Contact() {
         num_properties: 1,
         num_owners: 1,
         has_garage_storage: false,
+        is_rented: false,
         additional_notes: ''
       });
     } catch (error) {
@@ -200,6 +202,18 @@ export function Contact() {
                   className="w-4 h-4 bg-white/5 border border-white/10 text-[#8e7951] focus:ring-[#8e7951]"
                 />
                 <span className="text-white text-sm">Posiadam garaż lub komórkę lokatorską</span>
+              </label>
+            </div>
+
+            <div>
+              <label className="flex items-center gap-3 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={formData.is_rented}
+                  onChange={(e) => setFormData({ ...formData, is_rented: e.target.checked })}
+                  className="w-4 h-4 bg-white/5 border border-white/10 text-[#8e7951] focus:ring-[#8e7951]"
+                />
+                <span className="text-white text-sm">Nieruchomość jest wynajmowana</span>
               </label>
             </div>
 
