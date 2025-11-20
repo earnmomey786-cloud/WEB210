@@ -2,6 +2,9 @@ import { Home } from './pages/Home';
 import { PrivacyPolicy } from './pages/legal/PrivacyPolicy';
 import { CookiesPolicy } from './pages/legal/CookiesPolicy';
 import { LegalNotice as LegalNoticePage } from './pages/LegalNotice';
+import { ClientArea } from './pages/ClientArea';
+import { ClientLogin } from './components/ClientLogin';
+import { GastosDeducibles } from './pages/GastosDeducibles';
 import { CookieBanner } from './components/CookieBanner';
 
 function App() {
@@ -16,6 +19,12 @@ function App() {
         return <CookiesPolicy />;
       case '/legal/terms':
         return <LegalNoticePage />;
+      case '/login-clientes':
+        return <ClientLogin />;
+      case '/area-clientes':
+        return <ClientArea />;
+      case '/gastos-deducibles':
+        return <GastosDeducibles />;
       default:
         return <Home />;
     }
