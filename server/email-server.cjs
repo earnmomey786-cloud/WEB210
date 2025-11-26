@@ -4,10 +4,13 @@ const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 
-// Middleware
-app.use(cors());
+// Middleware - CORS configurado para producción
+app.use(cors({
+  origin: ['http://localhost:5173', 'https://podatkihiszpania.com', 'https://www.podatkihiszpania.com'],
+  credentials: true
+}));
 app.use(express.json());
 
 // Configurar transporter de Nodemailer

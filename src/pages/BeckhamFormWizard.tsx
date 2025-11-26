@@ -319,7 +319,12 @@ export default function BeckhamFormWizard() {
     setStatus("Wysyłanie...");
 
     try {
-      const response = await fetch('http://localhost:3001/api/send-beckham', {
+      // Detectar si estamos en desarrollo o producción
+      const API_URL = window.location.hostname === 'localhost' 
+        ? 'http://localhost:3001' 
+        : 'https://podatkihiszpania.com:3000';
+
+      const response = await fetch(`${API_URL}/api/send-beckham`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
