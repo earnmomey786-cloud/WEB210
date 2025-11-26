@@ -69,7 +69,7 @@ app.post('/api/send-beckham', async (req, res) => {
 
     const mailOptions = {
       from: '"PGK Hiszpania - Formulario Beckham" <info@pgkhiszpania.com>',
-      to: 'admin@pgkhiszpania.com',
+      to: process.env.TO_EMAIL || 'info@pgkhiszpania.com',
       subject: `✅ Nuevo cuestionario Beckham completado - ${new Date().toLocaleDateString('es-ES')}`,
       html: `
         <!DOCTYPE html>
