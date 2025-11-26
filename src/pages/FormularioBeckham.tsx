@@ -1,9 +1,51 @@
 import { useEffect, useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { Download, Save, Trash2, Upload, FileJson, FileSpreadsheet, Send } from 'lucide-react';
 import { isAuthenticated } from '../lib/auth';
 
 const STORAGE_KEY = "beckham_intake_v1";
+
+// Icons as components
+const SaveIcon = () => (
+  <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4" />
+  </svg>
+);
+
+const UploadIcon = () => (
+  <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
+  </svg>
+);
+
+const TrashIcon = () => (
+  <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+  </svg>
+);
+
+const DownloadIcon = () => (
+  <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+  </svg>
+);
+
+const FileJsonIcon = () => (
+  <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+  </svg>
+);
+
+const FileSpreadsheetIcon = () => (
+  <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+  </svg>
+);
+
+const SendIcon = () => (
+  <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+  </svg>
+);
 
 interface Field {
   key: string;
@@ -373,16 +415,16 @@ export function FormularioBeckham() {
 
           <div className="flex items-center gap-2">
             <button onClick={sendEmail} disabled={sending} className="flex items-center gap-2 rounded-xl bg-[#8e7951] px-3 py-2 text-xs font-medium text-white shadow hover:opacity-90 disabled:opacity-50">
-              <Send className="h-4 w-4" /> {sending ? 'Wysyłanie...' : 'Wyślij'}
+              <SendIcon /> {sending ? 'Wysyłanie...' : 'Wyślij'}
             </button>
             <button onClick={manualSave} className="flex items-center gap-2 rounded-xl bg-slate-900 px-3 py-2 text-xs font-medium text-white shadow hover:opacity-90">
-              <Save className="h-4 w-4" /> Zapisz
+              <SaveIcon /> Zapisz
             </button>
             <button onClick={loadLocal} className="flex items-center gap-2 rounded-xl border bg-white px-3 py-2 text-xs font-medium shadow-sm hover:bg-slate-50">
-              <Upload className="h-4 w-4" /> Załaduj
+              <UploadIcon /> Załaduj
             </button>
             <button onClick={clearAll} className="flex items-center gap-2 rounded-xl border bg-white px-3 py-2 text-xs font-medium shadow-sm hover:bg-slate-50">
-              <Trash2 className="h-4 w-4" /> Usuń
+              <TrashIcon /> Usuń
             </button>
           </div>
         </div>
@@ -405,13 +447,13 @@ export function FormularioBeckham() {
           </p>
           <div className="mt-3 flex flex-wrap gap-2">
             <button onClick={exportJSON} className="flex items-center gap-2 rounded-xl border bg-white px-3 py-2 text-xs font-medium shadow-sm hover:bg-slate-50">
-              <FileJson className="h-4 w-4" /> Eksportuj JSON
+              <FileJsonIcon /> Eksportuj JSON
             </button>
             <button onClick={exportCSV} className="flex items-center gap-2 rounded-xl border bg-white px-3 py-2 text-xs font-medium shadow-sm hover:bg-slate-50">
-              <FileSpreadsheet className="h-4 w-4" /> Eksportuj CSV
+              <FileSpreadsheetIcon /> Eksportuj CSV
             </button>
             <label className="flex cursor-pointer items-center gap-2 rounded-xl border bg-white px-3 py-2 text-xs font-medium shadow-sm hover:bg-slate-50">
-              <Download className="h-4 w-4" /> Importuj JSON
+              <DownloadIcon /> Importuj JSON
               <input type="file" accept="application/json" className="hidden" onChange={(e) => e.target.files?.[0] && importJSON(e.target.files[0])} />
             </label>
             {status && <span className="ml-2 text-xs font-medium text-[#8e7951]">{status}</span>}
