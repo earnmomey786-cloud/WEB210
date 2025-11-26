@@ -39,29 +39,22 @@ export function ClientArea() {
                 <p className="text-sm font-semibold text-gray-900">{email}</p>
               </div>
             </div>
-            <div className="flex items-center gap-3">
-              <button
-                onClick={handleLogout}
-                className="px-4 py-2 bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-red-600 rounded-lg transition flex items-center gap-2 text-sm font-medium"
-              >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
-                </svg>
-                Wyloguj się
-              </button>
-            </div>
+            <button
+              onClick={handleLogout}
+              className="px-4 py-2 bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-red-600 rounded-lg transition flex items-center gap-2 text-sm font-medium"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+              </svg>
+              Wyloguj się
+            </button>
           </div>
         </div>
       </div>
 
-      {/* Info Section */}
-      <div className="pt-24 pb-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <h2 className="text-2xl font-bold text-gray-900 mb-2">Koszty Uzyskania Przychodów Model 210</h2>
-        <p className="text-gray-600 mb-6">Szczegółowa lista kosztów podlegających odliczeniu w deklaracji dla nierezydentów</p>
-      </div>
       
       {/* Contenido: Visor de Gastos Deducibles */}
-      <div className="pb-8">
+      <div className="pt-20">
         <GastosDeducibles isEmbedded={true} onLogout={handleLogout} userEmail={email} />
       </div>
     </div>

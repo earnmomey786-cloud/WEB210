@@ -13,7 +13,7 @@ export function ClientLogin() {
     setLoading(true);
 
     if (!email || !nie) {
-      setError('Proszę wypełnić wszystkie pola');
+      setError('Por favor, completa todos los campos');
       setLoading(false);
       return;
     }
@@ -38,7 +38,7 @@ export function ClientLogin() {
               Strefa Klienta
             </h1>
             <p className="text-gray-600">
-              Zaloguj się za pomocą swojego emaila i hasła
+              Zaloguj się swoim emailem i hasłem
             </p>
           </div>
 
@@ -60,15 +60,15 @@ export function ClientLogin() {
 
             <div>
               <label htmlFor="nie" className="block text-sm font-medium text-gray-700 mb-2">
-                Hasło
+                Pass
               </label>
               <input
                 id="nie"
-                type="password"
+                type="text"
                 value={nie}
                 onChange={(e) => setNie(e.target.value)}
                 className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
-                placeholder="••••••••"
+                placeholder="12345678A"
                 required
               />
             </div>

@@ -4,9 +4,8 @@ import { CookiesPolicy } from './pages/legal/CookiesPolicy';
 import { LegalNotice as LegalNoticePage } from './pages/LegalNotice';
 import { ClientArea } from './pages/ClientArea';
 import { ClientLogin } from './components/ClientLogin';
-import { BeckhamLogin } from './components/BeckhamLogin';
 import { GastosDeducibles } from './pages/GastosDeducibles';
-import { FormularioBeckham } from './pages/FormularioBeckham';
+import BeckhamForm from './pages/BeckhamForm';
 import { CookieBanner } from './components/CookieBanner';
 
 function App() {
@@ -27,10 +26,8 @@ function App() {
         return <ClientArea />;
       case '/gastos-deducibles':
         return <GastosDeducibles />;
-      case '/login-beckham':
-        return <BeckhamLogin />;
-      case '/formulario-beckham':
-        return <FormularioBeckham />;
+      case '/beckham':
+        return <BeckhamForm />;
       default:
         return <Home />;
     }

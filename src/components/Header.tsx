@@ -2,9 +2,10 @@ import { useState } from 'react';
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  
+
   const handleLogoClick = (e: React.MouseEvent) => {
     e.preventDefault();
+    setMobileMenuOpen(false);
     // Si estamos en una página legal, volver al inicio
     if (window.location.pathname !== '/') {
       window.location.href = '/';
@@ -16,6 +17,7 @@ export function Header() {
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
+    setMobileMenuOpen(false);
     
     // Si estamos en una página legal, volver al inicio primero
     if (window.location.pathname !== '/') {
@@ -50,6 +52,7 @@ export function Header() {
           </div>
         </a>
 
+        {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-10 text-sm uppercase tracking-widest">
           <a 
             href="#cennik" 
@@ -90,66 +93,68 @@ export function Header() {
           </a>
         </nav>
 
-        {/* Mobile menu button */}
+        {/* Mobile Menu Button */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="lg:hidden p-2 text-white hover:text-[#8e7951] transition-colors"
+          className="lg:hidden p-2 hover:bg-white/10 rounded-lg transition"
           aria-label="Toggle menu"
         >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            {mobileMenuOpen ? (
+          {mobileMenuOpen ? (
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            ) : (
+            </svg>
+          ) : (
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            )}
-          </svg>
+            </svg>
+          )}
         </button>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-white/10 bg-[#1a1a1a]">
-          <nav className="flex flex-col px-4 py-3 space-y-2">
-            <a
-              href="#cennik"
-              onClick={(e) => { handleNavClick(e, '#cennik'); setMobileMenuOpen(false); }}
-              className="py-2 text-sm uppercase tracking-widest hover:text-[#8e7951] transition-colors font-medium"
+        <nav className="lg:hidden border-t border-white/10 py-4 px-4">
+          <div className="flex flex-col gap-3">
+            <a 
+              href="#cennik" 
+              onClick={(e) => handleNavClick(e, '#cennik')}
+              className="py-2 px-4 hover:bg-white/10 rounded-lg transition text-sm uppercase tracking-wide font-medium"
             >
               Cennik
             </a>
-            <a
-              href="#proces"
-              onClick={(e) => { handleNavClick(e, '#proces'); setMobileMenuOpen(false); }}
-              className="py-2 text-sm uppercase tracking-widest hover:text-[#8e7951] transition-colors font-medium"
+            <a 
+              href="#proces" 
+              onClick={(e) => handleNavClick(e, '#proces')}
+              className="py-2 px-4 hover:bg-white/10 rounded-lg transition text-sm uppercase tracking-wide font-medium"
             >
               Proces
             </a>
-            <a
-              href="#faq"
-              onClick={(e) => { handleNavClick(e, '#faq'); setMobileMenuOpen(false); }}
-              className="py-2 text-sm uppercase tracking-widest hover:text-[#8e7951] transition-colors font-medium"
+            <a 
+              href="#faq" 
+              onClick={(e) => handleNavClick(e, '#faq')}
+              className="py-2 px-4 hover:bg-white/10 rounded-lg transition text-sm uppercase tracking-wide font-medium"
             >
               FAQ
             </a>
-            <a
-              href="#kontakt"
-              onClick={(e) => { handleNavClick(e, '#kontakt'); setMobileMenuOpen(false); }}
-              className="py-2 text-sm uppercase tracking-widest hover:text-[#8e7951] transition-colors font-medium"
+            <a 
+              href="#kontakt" 
+              onClick={(e) => handleNavClick(e, '#kontakt')}
+              className="py-2 px-4 hover:bg-white/10 rounded-lg transition text-sm uppercase tracking-wide font-medium"
             >
               Kontakt
             </a>
-            <a
-              href="/login-clientes"
+            <a 
+              href="/login-clientes" 
               onClick={() => setMobileMenuOpen(false)}
-              className="py-2 text-sm uppercase tracking-widest hover:text-[#8e7951] transition-colors font-medium flex items-center gap-2"
+              className="py-2 px-4 hover:bg-white/10 rounded-lg transition text-sm uppercase tracking-wide font-medium flex items-center gap-2"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
               </svg>
               Clientes
             </a>
-          </nav>
-        </div>
+          </div>
+        </nav>
       )}
     </header>
   );
