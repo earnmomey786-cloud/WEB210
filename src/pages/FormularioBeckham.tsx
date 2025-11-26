@@ -1,5 +1,4 @@
 import { useEffect, useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
 import { isAuthenticated } from '../lib/auth';
 
 const STORAGE_KEY = "beckham_intake_v1";
@@ -441,7 +440,7 @@ export function FormularioBeckham() {
       </header>
 
       <main className="mx-auto max-w-5xl px-4 py-6">
-        <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="mb-6 rounded-2xl border bg-white p-4 shadow-sm">
+        <div className="mb-6 rounded-2xl border bg-white p-4 shadow-sm">
           <p className="text-sm text-slate-700">
             Wypełnij każdą sekcję możliwie dokładnie. Te informacje są wykorzystywane wyłącznie do analizy podatkowej i będą traktowane poufnie.
           </p>
@@ -458,15 +457,12 @@ export function FormularioBeckham() {
             </label>
             {status && <span className="ml-2 text-xs font-medium text-[#8e7951]">{status}</span>}
           </div>
-        </motion.div>
+        </div>
 
         <div className="space-y-5">
-          {SECTIONS.map((section, idx) => (
-            <motion.section
+          {SECTIONS.map((section) => (
+            <section
               key={section.id}
-              initial={{ opacity: 0, y: 6 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: idx * 0.03 }}
               className="rounded-2xl border bg-white p-5 shadow-sm"
             >
               <div className="mb-4">
@@ -482,7 +478,7 @@ export function FormularioBeckham() {
                   </div>
                 ))}
               </div>
-            </motion.section>
+            </section>
           ))}
         </div>
 
