@@ -21,7 +21,7 @@ function hashNIE(nie: string): string {
 // Para añadir un cliente nuevo, añadir email y NIE
 const AUTHORIZED_CLIENTS: Client[] = [
   {
-    email: "Klient@pgkhizspania.com",
+    email: "Klient@pgkhiszpania.com",
     nie: "zajebisty210"
   },
   // Añadir más clientes aquí

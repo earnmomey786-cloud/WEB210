@@ -5,6 +5,7 @@ import { LegalNotice as LegalNoticePage } from './pages/LegalNotice';
 import { ClientArea } from './pages/ClientArea';
 import { ClientLogin } from './components/ClientLogin';
 import { GastosDeducibles } from './pages/GastosDeducibles';
+import { FormularioBeckham } from './pages/FormularioBeckham';
 import { CookieBanner } from './components/CookieBanner';
 
 function App() {
@@ -25,6 +26,8 @@ function App() {
         return <ClientArea />;
       case '/gastos-deducibles':
         return <GastosDeducibles />;
+      case '/formulario-beckham':
+        return <FormularioBeckham />;
       default:
         return <Home />;
     }

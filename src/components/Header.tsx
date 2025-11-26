@@ -1,4 +1,8 @@
+import { useState } from 'react';
+
 export function Header() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  
   const handleLogoClick = (e: React.MouseEvent) => {
     e.preventDefault();
     // Si estamos en una página legal, volver al inicio
@@ -85,7 +89,68 @@ export function Header() {
             Clientes
           </a>
         </nav>
+
+        {/* Mobile menu button */}
+        <button
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          className="lg:hidden p-2 text-white hover:text-[#8e7951] transition-colors"
+          aria-label="Toggle menu"
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            {mobileMenuOpen ? (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            ) : (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            )}
+          </svg>
+        </button>
       </div>
+
+      {/* Mobile menu */}
+      {mobileMenuOpen && (
+        <div className="lg:hidden border-t border-white/10 bg-[#1a1a1a]">
+          <nav className="flex flex-col px-4 py-3 space-y-2">
+            <a
+              href="#cennik"
+              onClick={(e) => { handleNavClick(e, '#cennik'); setMobileMenuOpen(false); }}
+              className="py-2 text-sm uppercase tracking-widest hover:text-[#8e7951] transition-colors font-medium"
+            >
+              Cennik
+            </a>
+            <a
+              href="#proces"
+              onClick={(e) => { handleNavClick(e, '#proces'); setMobileMenuOpen(false); }}
+              className="py-2 text-sm uppercase tracking-widest hover:text-[#8e7951] transition-colors font-medium"
+            >
+              Proces
+            </a>
+            <a
+              href="#faq"
+              onClick={(e) => { handleNavClick(e, '#faq'); setMobileMenuOpen(false); }}
+              className="py-2 text-sm uppercase tracking-widest hover:text-[#8e7951] transition-colors font-medium"
+            >
+              FAQ
+            </a>
+            <a
+              href="#kontakt"
+              onClick={(e) => { handleNavClick(e, '#kontakt'); setMobileMenuOpen(false); }}
+              className="py-2 text-sm uppercase tracking-widest hover:text-[#8e7951] transition-colors font-medium"
+            >
+              Kontakt
+            </a>
+            <a
+              href="/login-clientes"
+              onClick={() => setMobileMenuOpen(false)}
+              className="py-2 text-sm uppercase tracking-widest hover:text-[#8e7951] transition-colors font-medium flex items-center gap-2"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+              </svg>
+              Clientes
+            </a>
+          </nav>
+        </div>
+      )}
     </header>
   );
 }

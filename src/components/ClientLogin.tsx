@@ -13,7 +13,7 @@ export function ClientLogin() {
     setLoading(true);
 
     if (!email || !nie) {
-      setError('Por favor, completa todos los campos');
+      setError('Proszę wypełnić wszystkie pola');
       setLoading(false);
       return;
     }
@@ -24,7 +24,7 @@ export function ClientLogin() {
       // Redirigir al área de clientes
       window.location.href = '/area-clientes';
     } else {
-      setError('Credenciales incorrectas. Verifica tu email y contraseña.');
+      setError('Nieprawidłowe dane logowania. Sprawdź swój email i hasło.');
       setLoading(false);
     }
   };
@@ -35,10 +35,10 @@ export function ClientLogin() {
         <div className="bg-white rounded-2xl shadow-xl p-8">
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-2">
-              Área de Clientes
+              Strefa Klienta
             </h1>
             <p className="text-gray-600">
-              Accede con tu email y contraseña
+              Zaloguj się za pomocą swojego emaila i hasła
             </p>
           </div>
 
@@ -60,15 +60,15 @@ export function ClientLogin() {
 
             <div>
               <label htmlFor="nie" className="block text-sm font-medium text-gray-700 mb-2">
-                Pass
+                Hasło
               </label>
               <input
                 id="nie"
-                type="text"
+                type="password"
                 value={nie}
                 onChange={(e) => setNie(e.target.value)}
                 className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
-                placeholder="12345678A"
+                placeholder="••••••••"
                 required
               />
             </div>
@@ -84,13 +84,13 @@ export function ClientLogin() {
               disabled={loading}
               className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {loading ? 'Verificando...' : 'Acceder'}
+              {loading ? 'Weryfikacja...' : 'Zaloguj się'}
             </button>
           </form>
 
           <div className="mt-6 text-center">
             <a href="/" className="text-sm text-gray-600 hover:text-gray-900">
-              ← Volver al inicio
+              ← Powrót do strony głównej
             </a>
           </div>
         </div>
