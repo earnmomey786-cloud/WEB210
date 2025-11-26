@@ -322,7 +322,7 @@ export default function BeckhamFormWizard() {
       // Detectar si estamos en desarrollo o producción
       const API_URL = window.location.hostname === 'localhost' 
         ? 'http://localhost:3001' 
-        : 'https://podatkihiszpania.com:3000';
+        : '';
 
       const response = await fetch(`${API_URL}/api/send-beckham`, {
         method: 'POST',
