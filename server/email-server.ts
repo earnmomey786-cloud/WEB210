@@ -341,6 +341,138 @@ www.pgkhiszpania.com
   }
 });
 
+// Endpoint para enviar formulario Beckham
+app.post('/api/send-beckham', async (req, res) => {
+  try {
+    const { formData } = req.body;
+
+    console.log('📥 Formulario Beckham recibido');
+
+    if (!formData || Object.keys(formData).length === 0) {
+      return res.status(400).json({ 
+        success: false, 
+        message: 'Formulario vacío' 
+      });
+    }
+
+    // Organizar datos por secciones
+    const sections = [
+      { id: "datos_clave", title: "0. Kluczowe dane i daty przeprowadzki" },
+      { id: "ingresos_laborales", title: "A1. Aktualne dochody z pracy (Polska)" },
+      { id: "cargos_directivos", title: "A2. Dochody z zarządzania" },
+      { id: "dividendos_participaciones", title: "A3. Dywidendy i udziały" },
+      { id: "fundacion_ared", title: "A4. Fundacja ARED" },
+      { id: "actividad_empresarial", title: "A5. Działalność gospodarcza" },
+      { id: "podcasts_colaboraciones", title: "A6. Dochody z podcastów" },
+      { id: "contrato_teletrabajo", title: "A7. Umowa z Firmao Polska" },
+      { id: "ingresos_irregulares", title: "A8. Dochody nieregularne" },
+      { id: "patrimonio", title: "B. Sytuacja majątkowa i aktywa" },
+      { id: "familia", title: "C. Struktura rodzinna" },
+      { id: "antecedentes", title: "D. Historia podatkowa" },
+    ];
+
+    // Construir HTML
+    let htmlContent = '';
+    let textContent = '';
+
+    sections.forEach(section => {
+      const sectionData = Object.entries(formData).filter(([key]) => 
+        key.includes(section.id.split('_')[0]) || 
+        Object.keys(formData).some(k => k === key)
+      );
+
+      if (sectionData.length > 0) {
+        htmlContent += `
+          <div style="margin-bottom: 30px;">
+            <h2 style="color: #8e7951; border-bottom: 2px solid #8e7951; padding-bottom: 10px; margin-bottom: 15px;">
+              ${section.title}
+            </h2>
+        `;
+        
+        textContent += `\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n${section.title}\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n`;
+      }
+    });
+
+    Object.entries(formData).forEach(([key, value]) => {
+      if (value && String(value).trim() !== '') {
+        const label = key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+        htmlContent += `
+          <div style="margin-bottom: 15px; padding: 10px; background: #f9f9f9; border-left: 3px solid #8e7951;">
+            <strong style="color: #1a1a1a;">${label}:</strong><br>
+            <span style="color: #333;">${String(value)}</span>
+          </div>
+        `;
+        textContent += `${label}: ${value}\n\n`;
+      }
+    });
+
+    htmlContent += `</div>`;
+
+    const mailOptions = {
+      from: '"PGK Hiszpania - Formulario Beckham" <info@pgkhiszpania.com>',
+      to: 'admin@pgkhiszpania.com',
+      subject: `📋 Nuevo Cuestionario Beckham - ${new Date().toLocaleDateString('es-ES')}`,
+      html: `
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <style>
+            body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+            .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+            .header { background: linear-gradient(135deg, #1a1a1a 0%, #8e7951 100%); color: white; padding: 30px; text-align: center; border-radius: 10px 10px 0 0; }
+            .content { background: white; padding: 30px; border: 1px solid #ddd; }
+            .footer { background: #1a1a1a; color: white; padding: 20px; text-align: center; border-radius: 0 0 10px 10px; font-size: 12px; }
+          </style>
+        </head>
+        <body>
+          <div class="container">
+            <div class="header">
+              <h1 style="margin: 0;">📋 Cuestionario Beckham Completado</h1>
+              <p style="margin: 10px 0 0 0; opacity: 0.9;">${new Date().toLocaleString('es-ES')}</p>
+            </div>
+            
+            <div class="content">
+              ${htmlContent}
+            </div>
+            
+            <div class="footer">
+              <p style="margin: 0;">© ${new Date().getFullYear()} Polska Grupa Konsultingowa SL</p>
+              <p style="margin: 5px 0 0 0; opacity: 0.8;">Formulario generado desde www.pgkhiszpania.com</p>
+            </div>
+          </div>
+        </body>
+        </html>
+      `,
+      text: `
+CUESTIONARIO BECKHAM - ${new Date().toLocaleString('es-ES')}
+
+${textContent}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+© ${new Date().getFullYear()} Polska Grupa Konsultingowa SL
+www.pgkhiszpania.com
+      `
+    };
+
+    console.log('📤 Enviando formulario Beckham a admin@pgkhiszpania.com...');
+    await transporter.sendMail(mailOptions);
+    console.log('✅ Formulario Beckham enviado correctamente');
+
+    res.json({ 
+      success: true, 
+      message: 'Formulario enviado correctamente'
+    });
+
+  } catch (error) {
+    console.error('❌ Error al enviar formulario Beckham:', error);
+    res.status(500).json({ 
+      success: false, 
+      message: 'Error al enviar el formulario',
+      error: error instanceof Error ? error.message : 'Unknown error'
+    });
+  }
+});
+
 // Health check
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', message: 'Email server is running' });

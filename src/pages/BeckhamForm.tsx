@@ -222,6 +222,7 @@ export default function BeckhamForm() {
   const [form, setForm] = useState<Record<string, any>>({});
   const [status, setStatus] = useState("");
   const [lastSaved, setLastSaved] = useState<number | null>(null);
+  const [currentStep, setCurrentStep] = useState(0);
 
   // Autosave (debounced-ish)
   useEffect(() => {
@@ -254,6 +255,27 @@ export default function BeckhamForm() {
   }, [form]);
 
   const onChange = (key: string, val: any) => setForm((prev) => ({ ...prev, [key]: val }));
+
+  const goNext = () => {
+    if (currentStep < SECTIONS.length - 1) {
+      setCurrentStep((s) => s + 1);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
+  const goPrev = () => {
+    if (currentStep > 0) {
+      setCurrentStep((s) => s - 1);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
+  const goToStep = (step: number) => {
+    if (step >= 0 && step < SECTIONS.length) {
+      setCurrentStep(step);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
 
   const manualSave = () => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify({ form, lastSaved: Date.now() }));
@@ -364,26 +386,73 @@ export default function BeckhamForm() {
         </div>
 
         <div className="space-y-5">
-          {SECTIONS.map((section, idx) => (
-            <section
-              key={section.id}
-              className="rounded-2xl border bg-white p-5 shadow-sm"
-            >
-              <div className="mb-4">
-                <h2 className="text-base font-semibold">{section.title}</h2>
-                {section.description && <p className="mt-1 text-xs text-slate-500">{section.description}</p>}
-              </div>
+          {/* Indicador de pasos */}
+          <div className="rounded-2xl border bg-white p-4 shadow-sm">
+            <div className="mb-3 text-center text-sm font-medium text-slate-700">
+              Krok {currentStep + 1} z {SECTIONS.length}
+            </div>
+            <div className="flex flex-wrap justify-center gap-2">
+              {SECTIONS.map((section, idx) => (
+                <button
+                  key={section.id}
+                  onClick={() => goToStep(idx)}
+                  className={`h-8 w-8 rounded-full text-xs font-semibold transition-all ${
+                    idx === currentStep
+                      ? "bg-slate-900 text-white shadow-lg"
+                      : idx < currentStep
+                      ? "bg-emerald-500 text-white hover:bg-emerald-600"
+                      : "bg-slate-200 text-slate-600 hover:bg-slate-300"
+                  }`}
+                  title={section.title}
+                >
+                  {idx + 1}
+                </button>
+              ))}
+            </div>
+          </div>
 
-              <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-                {section.fields.map((field) => (
-                  <div key={field.key} className={field.type === "textarea" ? "md:col-span-2" : ""}>
-                    <label className="mb-1 block text-xs font-medium text-slate-700">{field.label}</label>
-                    <Field field={field} value={form[field.key]} onChange={onChange} />
-                  </div>
-                ))}
-              </div>
-            </section>
-          ))}
+          {/* Sección actual */}
+          {(() => {
+            const section = SECTIONS[currentStep];
+            return (
+              <section className="rounded-2xl border bg-white p-5 shadow-sm">
+                <div className="mb-4">
+                  <h2 className="text-base font-semibold">{section.title}</h2>
+                  {section.description && <p className="mt-1 text-xs text-slate-500">{section.description}</p>}
+                </div>
+
+                <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+                  {section.fields.map((field) => (
+                    <div key={field.key} className={field.type === "textarea" ? "md:col-span-2" : ""}>
+                      <label className="mb-1 block text-xs font-medium text-slate-700">{field.label}</label>
+                      <Field field={field} value={form[field.key]} onChange={onChange} />
+                    </div>
+                  ))}
+                </div>
+              </section>
+            );
+          })()}
+
+          {/* Botones de navegación */}
+          <div className="flex items-center justify-between rounded-2xl border bg-white p-4 shadow-sm">
+            <button
+              onClick={goPrev}
+              disabled={currentStep === 0}
+              className="flex items-center gap-2 rounded-xl bg-slate-900 px-4 py-2 text-sm font-medium text-white shadow hover:opacity-90 disabled:opacity-40 disabled:cursor-not-allowed"
+            >
+              ← Poprzedni
+            </button>
+            <span className="text-sm text-slate-600">
+              {currentStep + 1} / {SECTIONS.length}
+            </span>
+            <button
+              onClick={goNext}
+              disabled={currentStep === SECTIONS.length - 1}
+              className="flex items-center gap-2 rounded-xl bg-slate-900 px-4 py-2 text-sm font-medium text-white shadow hover:opacity-90 disabled:opacity-40 disabled:cursor-not-allowed"
+            >
+              Następny →
+            </button>
+          </div>
         </div>
 
         <footer className="mt-8 rounded-2xl border bg-white p-4 text-xs text-slate-600 shadow-sm">
