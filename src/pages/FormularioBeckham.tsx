@@ -179,12 +179,16 @@ const SECTIONS: Section[] = [
 function Field({ field, value, onChange }: { field: Field; value: any; onChange: (key: string, val: any) => void }) {
   const base = "w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm shadow-sm focus:border-[#8e7951] focus:outline-none focus:ring-2 focus:ring-[#8e7951]/20";
 
+  if (!field || !field.key) {
+    return null;
+  }
+
   if (field.type === "textarea") {
     return (
       <textarea
         className={base + " min-h-[88px]"}
         placeholder={field.placeholder || ""}
-        value={value || ""}
+        value={value ?? ""}
         onChange={(e) => onChange(field.key, e.target.value)}
       />
     );
@@ -193,7 +197,7 @@ function Field({ field, value, onChange }: { field: Field; value: any; onChange:
   if (field.type === "radio") {
     return (
       <div className="flex flex-wrap gap-3">
-        {field.options?.map((opt) => (
+        {(field.options || []).map((opt) => (
           <label key={opt} className="flex items-center gap-2 text-sm">
             <input
               type="radio"
@@ -214,7 +218,7 @@ function Field({ field, value, onChange }: { field: Field; value: any; onChange:
       className={base}
       type={field.type || "text"}
       placeholder={field.placeholder || ""}
-      value={value || ""}
+      value={value ?? ""}
       onChange={(e) => onChange(field.key, e.target.value)}
     />
   );
@@ -237,7 +241,7 @@ export function FormularioBeckham() {
   // Redirect if not authenticated
   useEffect(() => {
     if (!isAuthenticated()) {
-      window.location.href = '/login-clientes';
+      window.location.href = '/login-beckham';
     }
   }, []);
 
